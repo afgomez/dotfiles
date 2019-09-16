@@ -1,2 +1,7 @@
 [include]
 	path = ~/.gitconfig.local
+
+[alias]
+	co = checkout
+	ci = commit
+	st = status
