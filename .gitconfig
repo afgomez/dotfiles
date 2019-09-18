@@ -23,5 +23,8 @@
 [diff]
 	algorithm = histogram
 
+[grep]
+	linenumber = true
+
 [pull]
 	rebase = true
