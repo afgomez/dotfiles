@@ -1,3 +1,5 @@
+# Setup emacs-style bindings
+bindkey -e
 
 if [ -d "$HOME/.zshrc.d" ]; then
   for file in $HOME/.zshrc.d/*.zsh; do
