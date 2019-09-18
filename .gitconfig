@@ -3,5 +3,10 @@
 
 [alias]
 	co = checkout
-	ci = commit
 	st = status
+
+	ci = commit
+	amend = commit --amend
+
+[commit]
+	verbose = true
