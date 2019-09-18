@@ -20,5 +20,8 @@
 [commit]
 	verbose = true
 
+[diff]
+	algorithm = histogram
+
 [pull]
 	rebase = true
