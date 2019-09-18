@@ -11,14 +11,14 @@
 	graph = log --graph --oneline
 	mine = !"git log --author=$(git config --get user.email)"
 
-[commit]
-	verbose = true
+[branch]
+	autosetuprebase = always
 
 [checkout]
 	defaultremote = origin
 
-[branch]
-	autosetuprebase = always
+[commit]
+	verbose = true
 
 [pull]
 	rebase = true
