@@ -13,3 +13,9 @@
 
 [commit]
 	verbose = true
+
+[branch]
+	autosetuprebase = always
+
+[pull]
+	rebase = true
