@@ -1,4 +1,8 @@
 # Load completions from homebrew if available
+if type brew &>/dev/null; then
+  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+fi
+
 if [ -d "/usr/local/share/zsh-completions" ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi
