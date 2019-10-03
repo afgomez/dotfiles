@@ -10,7 +10,10 @@ fi
 setopt menu_complete
 
 autoload -U compinit
-compinit
+compinit -d "$ZSH_CACHE_DIR/zcompdump"
+
+zstyle ':completion:*' use-cache 1
+zstyle ':completion:*' cache-path $ZSH_CACHE_DIR
 
 # Use a navigable menu for completions
 zstyle ':completion:*' menu select
