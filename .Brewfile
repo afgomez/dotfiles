@@ -15,3 +15,9 @@ brew "yarn"
 brew "z"
 brew "zsh"
 brew "zsh-completions"
+
+
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "quicklook-json"
