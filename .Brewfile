@@ -16,7 +16,7 @@ brew "z"
 brew "zsh"
 brew "zsh-completions"
 
-
+cask "alacritty"
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
