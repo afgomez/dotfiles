@@ -17,6 +17,9 @@ brew "zsh"
 brew "zsh-completions"
 
 cask "alacritty"
+
+cask "hammerspoon"
+
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
