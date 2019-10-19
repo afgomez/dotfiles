@@ -169,12 +169,12 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Pizarra)
+# Colors (Pizarra Dark)
 colors:
   # Default colors
   primary:
-    background: "0x08090b"
-    foreground: "0xebeced"
+    background: "0x171717"
+    foreground: "0xdcdcdc"
 
     # Bright and dim foreground colors
     #
@@ -203,25 +203,25 @@ colors:
 
   # Normal colors
   normal:
-    black: "0x040506"
-    red: "0xD64933"
-    green: "0x97D633"
-    yellow: "0xD6B233"
-    blue: "0x4089b5"
-    magenta: "0xD65191"
-    cyan: "0x67EDFF"
-    white: "0xebeced"
+    black: "0x000000"
+    red: "0xEF3E30"
+    green: "0x9CDD2D"
+    yellow: "0xEED130"
+    blue: "0x208492"
+    magenta: "0xE469A7"
+    cyan: "0x90C8DA"
+    white: "0xDCDCDC"
 
   # Bright colors
   bright:
-    black: "0x64686f"
-    red: "0xDD8577"
-    green: "0xB5DD77"
-    yellow: "0xDDC677"
-    blue: "0x52afe8"
-    magenta: "0xDD96B8"
-    cyan: "0xB4F6FF"
-    white: "0xffffff"
+    black: "0x515151"
+    red: "0xFF7F75"
+    green: "0xC3F470"
+    yellow: "0xFFEC81"
+    blue: "0x61B2BD"
+    magenta: "0xFABADA"
+    cyan: "0xC1E4F0"
+    white: "0xFFFFFF"
 
   # Dim colors
   #
