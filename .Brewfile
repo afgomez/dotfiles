@@ -20,6 +20,8 @@ cask "alacritty"
 
 cask "hammerspoon"
 
+cask "iterm2"
+
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
