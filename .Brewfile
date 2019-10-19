@@ -17,12 +17,13 @@ brew "zsh"
 brew "zsh-completions"
 
 cask "alacritty"
-
+cask "caffeine"
+cask "flux"
 cask "hammerspoon"
-
+cask "imageoptim"
 cask "iterm2"
-
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
 cask "quicklook-json"
+cask "quicklook-csv"
