@@ -6,3 +6,7 @@ if [ -d "$HOME/.zshrc.d" ]; then
     source "$file"
   done
 fi
+
+if [ -e "$HOME/.localrc" ]; then
+  source $HOME/.localrc
+fi
