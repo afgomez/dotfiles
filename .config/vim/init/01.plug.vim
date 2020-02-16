@@ -26,6 +26,10 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
+if !has('gui_running')
+  Plug 'sjl/vitality.vim'
+endif
+
 call plug#end()
 
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
