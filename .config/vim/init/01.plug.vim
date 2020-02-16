@@ -11,6 +11,7 @@ endif
 call plug#begin("$XDG_DATA_HOME/vim/plugged")
 
 Plug 'afgomez/vim-whitespace'
+Plug 'ayu-theme/ayu-vim'
 Plug 'cohama/lexima.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farmergreg/vim-lastplace'
