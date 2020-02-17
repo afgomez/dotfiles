@@ -29,3 +29,7 @@ set virtualedit=block
 set nowrap
 set linebreak
 set showbreak=↪
+
+" FZF
+"
+let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.4, 'yoffset': 0.05 } }

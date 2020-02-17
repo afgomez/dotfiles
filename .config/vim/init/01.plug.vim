@@ -15,7 +15,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'cohama/lexima.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farmergreg/vim-lastplace'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'

@@ -16,3 +16,6 @@ if [ $system=="Darwin" ]; then
   # Use colors in LS
   export CLICOLOR=1
 fi
+
+
+export FZF_DEFAULT_OPTS="--layout=reverse"
