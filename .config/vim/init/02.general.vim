@@ -16,10 +16,14 @@ set visualbell
 
 " File read/write related behaviour
 "
-set autoread
 set hidden
 set switchbuf=useopen
 
+" Load files if they are newer
+set autoread
+au FocusGained,BufEnter,CursorHold,CursorHoldI * silent! checktime
+
+" Save files when focus is lost
 set autowrite
 augroup focus_lost
   autocmd!
