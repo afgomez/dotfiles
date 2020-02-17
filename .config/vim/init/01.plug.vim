@@ -2,13 +2,13 @@
 " Setup plugins
 " -------------
 
-if empty(glob('$XDG_DATA_HOME/vim/autoload/plug.vim'))
+if empty(glob($XDG_DATA_HOME . '/vim/autoload/plug.vim'))
   silent !curl -fLo $XDG_DATA_HOME/vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin("$XDG_DATA_HOME/vim/plugged")
+call plug#begin($XDG_DATA_HOME . "/vim/plugged")
 
 Plug 'afgomez/vim-whitespace'
 Plug 'ayu-theme/ayu-vim'

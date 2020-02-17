@@ -1,1 +1,1 @@
-source $XDG_CONFIG_HOME/vim/init.vim
+exec "source " . stdpath('config') . "/../vim/init.vim"
