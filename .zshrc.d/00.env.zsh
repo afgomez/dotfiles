@@ -17,5 +17,4 @@ if [ $system=="Darwin" ]; then
   export CLICOLOR=1
 fi
 
-
-export FZF_DEFAULT_OPTS="--layout=reverse"
+export FZF_DEFAULT_OPTS="--layout=reverse --info=hidden"
