@@ -11,9 +11,6 @@ set smartindent
 "
 set clipboard=unnamed
 
-" Don't be annoying
-set visualbell
-
 " File read/write related behaviour
 "
 set hidden
@@ -38,5 +35,8 @@ endif
 
 " Misc
 "
-"
+set visualbell
+
 set history=10000
+
+set mouse=a
