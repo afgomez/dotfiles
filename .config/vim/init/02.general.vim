@@ -11,6 +11,14 @@ set smartindent
 "
 set clipboard=unnamed
 
+" Search
+"
+set hlsearch      " Highlight search results
+set incsearch     " ...dynamically as they are typed.
+set ignorecase    " Don't care about case
+set smartcase     " Insensitive case unless there are some uppercase letters
+
+
 " File read/write related behaviour
 "
 set hidden
