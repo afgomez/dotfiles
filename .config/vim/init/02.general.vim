@@ -30,6 +30,12 @@ au FocusGained,BufEnter,CursorHold,CursorHoldI * silent! checktime
 
 " Save files when focus is lost
 set autowrite
+
+augroup format
+  autocmd!
+  autocmd BufWritePre * silent! undojoin | silent! Neoformat
+augroup END
+
 augroup focus_lost
   autocmd!
   autocmd BufLeave,FocusLost * silent! wall
@@ -39,7 +45,6 @@ augroup END
 if (!has('gui'))
   let g:vitality_always_assume_iterm=1
 endif
-
 
 " Misc
 "

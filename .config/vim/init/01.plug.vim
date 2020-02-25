@@ -18,6 +18,7 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
