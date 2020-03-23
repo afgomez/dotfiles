@@ -17,6 +17,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-commentary'
