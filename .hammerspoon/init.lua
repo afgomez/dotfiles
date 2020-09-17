@@ -7,8 +7,7 @@ hs.hotkey.bind(window_prefix, "Left", function()
   hs.window.focusedWindow():move({ x = 0.00, y = 0.00, w = 0.50, h = 1.00 }, nil, true)
 end)
 
-hs.hotkey.bind(window_prefix, "Right", function()
-  hs.window.focusedWindow():move({ x = 0.50, y = 0.00, w = 0.50, h = 1.00 }, nil, true)
+hs.hotkey.bind(window_prefix, "Right", function() hs.window.focusedWindow():move({ x = 0.50, y = 0.00, w = 0.50, h = 1.00 }, nil, true)
 end)
 
 hs.hotkey.bind(window_prefix, "Up", function()
@@ -37,7 +36,7 @@ hs.hotkey.bind(window_prefix, "4", function()
 end)
 
 -- Occupy the whole screen
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "M", function()
+hs.hotkey.bind(window_prefix, "M", function()
   hs.window.focusedWindow():move({ x = 0.00, y = 0.00, w = 1.00, h = 1.00 }, nil, true)
 end)
 
