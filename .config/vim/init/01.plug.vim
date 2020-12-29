@@ -29,6 +29,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'vimwiki/vimwiki'
 
 if !has('gui_running')
   Plug 'sjl/vitality.vim'
