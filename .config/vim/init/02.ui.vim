@@ -20,6 +20,8 @@ set signcolumn=yes   " Prevent the UI from jumping when showing gutter symbols
 
 set updatetime=300
 
+set linespace=2      " In graphic windows, tweak the line-height
+
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
