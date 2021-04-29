@@ -1,5 +1,5 @@
 # Autocomplete code projects
-cdpath=($HOME/code)
+cdpath=(. $HOME/code)
 
 # Treat directories as commands
 setopt autocd
