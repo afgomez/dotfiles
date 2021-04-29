@@ -11,6 +11,7 @@ endif
 call plug#begin($XDG_DATA_HOME . "/vim/plugged")
 
 Plug 'afgomez/vim-whitespace'
+Plug 'andymass/vim-matchup'
 Plug 'ayu-theme/ayu-vim'
 Plug 'cohama/lexima.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -36,7 +37,3 @@ if !has('gui_running')
 endif
 
 call plug#end()
-
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim
-endif
