@@ -18,3 +18,8 @@ if [ $system=="Darwin" ]; then
 fi
 
 export FZF_DEFAULT_OPTS="--layout=reverse --info=hidden"
+
+# Load brew in Apple Silicon machines
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
