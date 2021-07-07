@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
 
-for file in $HOME/.yadm/bootstrap.d/*.zsh; do
+for file in $HOME/.config/yadm/bootstrap.d/*.zsh; do
   source "$file"
 done
