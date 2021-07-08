@@ -20,8 +20,8 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-compe'
 
   -- Treesitter
-
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- Other
   use 'afgomez/vim-whitespace'
@@ -30,6 +30,7 @@ return require('packer').startup(function()
   use 'farmergreg/vim-lastplace'
   use 'shaunsingh/nord.nvim'
   use 'windwp/nvim-autopairs'
+  use 'tpope/vim-commentary'
 
   use {
     'nvim-telescope/telescope.nvim',
