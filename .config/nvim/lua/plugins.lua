@@ -17,6 +17,8 @@ return require('packer').startup(function()
     'kabouzeid/nvim-lspinstall'
   }
 
+  use 'folke/lua-dev.nvim'
+
   use 'hrsh7th/nvim-compe'
 
   -- Treesitter

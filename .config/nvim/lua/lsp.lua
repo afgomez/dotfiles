@@ -33,9 +33,13 @@ end
 local function setup_servers()
   local servers = require'lspinstall'.installed_servers()
   for _, server in pairs(servers) do
-    local opts = {
-        on_attach = on_attach,
-    }
+    local opts = {}
+
+    if server == 'lua' then
+      opts = require('lua-dev').setup()
+    end
+
+    opts.on_attach = on_attach
 
     nvim_lsp[server].setup(opts)
   end
