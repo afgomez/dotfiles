@@ -4,6 +4,7 @@ require('keymaps')
 require('backup')
 
 require('lsp')
+require('treesitter')
 
 require('plugin/telescope')
 require('plugin/compe')

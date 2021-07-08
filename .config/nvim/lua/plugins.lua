@@ -19,6 +19,10 @@ return require('packer').startup(function()
 
   use 'hrsh7th/nvim-compe'
 
+  -- Treesitter
+
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
   -- Other
 
   use 'afgomez/vim-whitespace'
