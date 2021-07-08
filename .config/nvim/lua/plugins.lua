@@ -20,6 +20,9 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-compe'
 
   -- Other
+
+  use 'afgomez/vim-whitespace'
+
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
