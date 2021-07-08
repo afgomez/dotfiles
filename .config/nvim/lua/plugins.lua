@@ -27,6 +27,7 @@ return require('packer').startup(function()
   use 'afgomez/vim-whitespace'
   use 'windwp/nvim-autopairs'
   use 'shaunsingh/nord.nvim'
+  use 'farmergreg/vim-lastplace'
 
   use {
     'nvim-telescope/telescope.nvim',
