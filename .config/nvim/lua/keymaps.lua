@@ -13,11 +13,11 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {})
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {})
 
 
--- Reselect when identing visual blocks 
+-- Reselect when identing visual blocks
 vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true })
 vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true })
 
 
--- Telescope 
+-- Telescope
 vim.api.nvim_set_keymap('n', '<leader>f', [[<cmd>lua require('plugin/telescope').project_files()<cr>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', { noremap = true })

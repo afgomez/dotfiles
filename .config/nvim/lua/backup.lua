@@ -26,6 +26,3 @@ if !isdirectory(expand(&undodir))
   call mkdir(expand(&undodir), "p")
 endif
 ]], false)
-
-
-

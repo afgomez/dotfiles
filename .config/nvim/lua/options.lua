@@ -77,9 +77,5 @@ vim.o.linebreak = true
 vim.o.showbreak = '↪'
 
 
-
 -- Misc
 vim.o.history = 10000
-
-
-
