@@ -24,8 +24,9 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Other
-
   use 'afgomez/vim-whitespace'
+  use 'windwp/nvim-autopairs'
+
 
   use {
     'nvim-telescope/telescope.nvim',

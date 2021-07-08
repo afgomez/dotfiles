@@ -8,3 +8,4 @@ require('treesitter')
 
 require('plugin/telescope')
 require('plugin/compe')
+require('plugin/autopairs')
