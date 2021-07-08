@@ -77,5 +77,11 @@ vim.o.linebreak = true
 vim.o.showbreak = '↪'
 
 
+-- Fold
+vim.o.foldlevel = 99
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+
+
 -- Misc
 vim.o.history = 10000
