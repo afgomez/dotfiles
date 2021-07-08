@@ -8,9 +8,13 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function() 
+  -- Packer
   use 'wbthomason/packer.nvim'
 
-
-
+  
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
 
 end)
