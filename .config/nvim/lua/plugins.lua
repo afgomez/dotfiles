@@ -11,7 +11,14 @@ return require('packer').startup(function()
   -- Packer
   use 'wbthomason/packer.nvim'
 
-  
+  -- LSP
+  use {
+    'neovim/nvim-lspconfig',
+    'kabouzeid/nvim-lspinstall'
+  }
+
+
+  -- Other
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
