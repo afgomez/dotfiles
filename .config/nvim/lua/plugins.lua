@@ -31,6 +31,8 @@ return require('packer').startup(function()
   use 'shaunsingh/nord.nvim'
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-commentary'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-unimpaired'
 
   use {
     'nvim-telescope/telescope.nvim',
