@@ -6,3 +6,4 @@ require('backup')
 require('lsp')
 
 require('plugin/telescope')
+require('plugin/compe')

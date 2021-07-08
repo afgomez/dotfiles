@@ -17,6 +17,7 @@ return require('packer').startup(function()
     'kabouzeid/nvim-lspinstall'
   }
 
+  use 'hrsh7th/nvim-compe'
 
   -- Other
   use {
