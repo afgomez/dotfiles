@@ -25,6 +25,8 @@ end
 
 local function on_attach(_, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  require'keymaps'.lsp_keymap(bufnr)
 end
 
 
