@@ -17,13 +17,13 @@ vim.o.switchbuf = 'useopen'
 vim.o.autoread = true
 vim.o.autowriteall = true
 
-vim.api.nvim_exec([[
+vim.cmd([[
 augroup auto_read_write
   autocmd!
   autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * silent! checktime
   autocmd BufLeave,FocusLost * silent! wall
 augroup END
-]], false)
+]])
 
 
 -- Mouse
@@ -62,7 +62,7 @@ vim.o.termguicolors = true
 
 -- TODO for GUI, change this based on light/dark mode
 vim.o.background = 'dark'
-vim.api.nvim_command('colorscheme default')
+vim.cmd('colorscheme default')
 
 
 
