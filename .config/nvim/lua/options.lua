@@ -62,8 +62,7 @@ vim.o.termguicolors = true
 
 -- TODO for GUI, change this based on light/dark mode
 vim.o.background = 'dark'
-vim.cmd('colorscheme default')
-
+vim.cmd('colorscheme nord')
 
 
 -- GUI
