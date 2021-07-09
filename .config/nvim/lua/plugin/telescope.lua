@@ -12,11 +12,11 @@ require('telescope').setup{
   }
 }
 
+require('telescope').load_extension('fzy_native')
 
 M.project_files = function()
-  local opts = {}
-  local ok = pcall(require'telescope.builtin'.git_files, opts)
-  if not ok then require'telescope.builtin'.find_files(opts) end
+  local ok = pcall(require'telescope.builtin'.git_files)
+  if not ok then require'telescope.builtin'.find_files() end
 end
 
 return M
