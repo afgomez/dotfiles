@@ -44,6 +44,8 @@ vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+vim.o.grepprg = "rg --vimgrep --no-heading --smart-case"
+
 
 -- UI
 vim.o.number = true
