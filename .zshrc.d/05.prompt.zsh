@@ -22,6 +22,9 @@ precmd () {
       master*)
         color="red"
       ;;
+      main*)
+        color="red"
+      ;;
       *)
         color="yellow"
       ;;
