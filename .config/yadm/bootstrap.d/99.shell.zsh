@@ -11,7 +11,7 @@ fi
 if [[ $SHELL != $ZSH_BIN ]]; then
   echo "❯ Set `zsh` as your shell ($ZSH_BIN)"
 
-  i [ ! `grep $ZSH_BIN /etc/shells` ]; then
+  if [ ! `grep $ZSH_BIN /etc/shells` ]; then
     echo $ZSH_BIN | sudo tee -a /etc/shells
   fi
 
