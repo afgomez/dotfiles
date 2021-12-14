@@ -14,7 +14,7 @@ return require('packer').startup(function()
   -- LSP
   use {
     'neovim/nvim-lspconfig',
-    'kabouzeid/nvim-lspinstall'
+    'williamboman/nvim-lsp-installer'
   }
 
   use 'folke/lua-dev.nvim'
@@ -26,15 +26,16 @@ return require('packer').startup(function()
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- Other
+  use 'Mofiqul/vscode.nvim'
   use 'afgomez/vim-whitespace'
   use 'andymass/vim-matchup'
   use 'editorconfig/editorconfig-vim'
   use 'farmergreg/vim-lastplace'
   use 'shaunsingh/nord.nvim'
-  use 'windwp/nvim-autopairs'
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
+  use 'windwp/nvim-autopairs'
 
   use {
     'nvim-telescope/telescope.nvim',

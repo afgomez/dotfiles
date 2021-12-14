@@ -1,53 +1,70 @@
 local nvim_lsp = require('lspconfig')
--- local lsp_installer = require('nvim-lsp-installer')
-local lsp_installer = require('lspinstall')
+local lsp_installer_servers = require'nvim-lsp-installer.servers'
 
-lsp_installer.setup()
-
-local languages = {
-  'css',
+local language_servers = {
+  'cssls',
+  'eslint',
   'html',
-  'json',
-  'lua',
-  'rust',
-  'typescript',
-  'yaml',
+  'jsonls',
+  'solargraph',
+  'sumneko_lua',
+  'rust_analyzer',
+  'tsserver',
+  'vimls',
+  'yamlls',
 }
 
--- Ensure language servers are installed
-for _, lang in ipairs(languages) do
-  if not lsp_installer.is_server_installed(lang) then
-    lsp_installer.install_server(lang)
-  end
-end
-
-
-
+-- Enable autocomplete using LSP
 local function on_attach(_, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   require'keymaps'.lsp_keymap(bufnr)
 end
 
+-- Ensure language servers are installed
+for _, lang_server in ipairs(language_servers) do
+    local server_available, requested_server = lsp_installer_servers.get_server(lang_server)
+    if server_available then
+        requested_server:on_ready(function ()
+            local opts = {}
+            if lang_server == 'sumneko_lua' then
+              opts = require('lua-dev').setup()
+            end
 
-local function setup_servers()
-  local servers = require'lspinstall'.installed_servers()
-  for _, server in pairs(servers) do
-    local opts = {}
+            opts.on_attach = on_attach
+            opts.flags = {
+              debounce_text_changes = 150,
+            }
 
-    if server == 'lua' then
-      opts = require('lua-dev').setup()
+            requested_server:setup(opts)
+        end)
+        if not requested_server:is_installed() then
+             -- Queue the server to be installed
+            requested_server:install()
+        end
     end
-
-    opts.on_attach = on_attach
-
-    nvim_lsp[server].setup(opts)
-  end
 end
 
-setup_servers()
+-- local function setup_servers()
+--   for _, server in pairs(servers) do
+--     local opts = {}
 
-lsp_installer.post_install_hook = function ()
-  setup_servers()
-  vim.cmd('bufdo e')
-end
+--     if server == 'lua' then
+--       opts = require('lua-dev').setup()
+--     end
+
+--     opts.on_attach = on_attach
+--     opts.flags = {
+--       debounce_text_changes = 150,
+--     }
+
+--     nvim_lsp[server].setup(opts)
+--   end
+-- end
+
+-- setup_servers()
+
+-- lsp_installer.post_install_hook = function ()
+--   setup_servers()
+--   vim.cmd('bufdo e')
+-- end

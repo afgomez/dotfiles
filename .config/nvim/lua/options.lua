@@ -63,8 +63,9 @@ vim.o.virtualedit = 'block'
 vim.o.termguicolors = true
 
 -- TODO for GUI, change this based on light/dark mode
+vim.g.vscode_style = "dark"
 vim.o.background = 'dark'
-vim.cmd('colorscheme nord')
+vim.cmd[[colorscheme vscode]]
 
 
 -- GUI
