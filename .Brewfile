@@ -1,3 +1,5 @@
+tap "homebrew/cask-fonts"
+
 brew "asdf"
 brew "bat"
 brew "fd"
@@ -20,7 +22,6 @@ brew "zsh-completions"
 
 cask "caffeine"
 cask "flux"
-cask "font-cascadia"
 cask "font-iosevka"
 cask "font-jetbrains-mono"
 cask "hammerspoon"
