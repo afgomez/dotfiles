@@ -9,4 +9,7 @@ if [ -d "$HOME/.cargo/bin" ]; then
   path=($HOME/.cargo/bin $path)
 fi
 
-
+# Go
+if [ -d "$HOME/go/bin" ]; then
+  path=($HOME/go/bin $path)
+fi
