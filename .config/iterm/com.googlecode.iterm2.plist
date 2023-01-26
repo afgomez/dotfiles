@@ -2186,7 +2186,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>PragmataProMono-Regular 14</string>
+			<string>Iosevka-Fixed 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2279,6 +2279,8 @@
 					<string></string>
 				</dict>
 			</array>
+			<key>Unicode Normalization</key>
+			<integer>0</integer>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
@@ -2292,7 +2294,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.05</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -3031,6 +3033,8 @@
 	<false/>
 	<key>UseBorder</key>
 	<false/>
+	<key>UseExperimentalFontMetrics</key>
+	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
