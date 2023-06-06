@@ -18,7 +18,7 @@ brew "tmux"
 brew "tokei"
 brew "tree"
 brew "yarn"
-brew "z"
+brew "zoxide"
 brew "zsh"
 brew "zsh-completions"
 

@@ -5,7 +5,6 @@ cdpath=(. $HOME/code)
 setopt autocd
 
 # Load `z` from homebrew if available
-if [[ -e "/opt/homebrew/etc/profile.d/z.sh" ]]; then
-  . /opt/homebrew/etc/profile.d/z.sh
-  [[ ! -e "$HOME/.z" ]] && touch $HOME/.z
+if [ -f /opt/homebrew/bin/zoxide ]; then
+  eval "$(/opt/homebrew/bin/zoxide init zsh)"
 fi
