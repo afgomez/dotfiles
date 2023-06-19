@@ -13,3 +13,9 @@ fi
 if [ -d "$HOME/go/bin" ]; then
   path=($HOME/go/bin $path)
 fi
+
+# PostgreSQL tooling
+
+if [ -d "/opt/homebrew/opt/libpq/bin" ]; then
+  path=(/opt/homebrew/opt/libpq/bin $path)
+fi
