@@ -1,11 +1,8 @@
-require('plugins')
-require('options')
-require('keymaps')
-require('backup')
+-- This is required by lazy.nvim
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-require('lsp')
-require('treesitter')
-
-require('plugin/telescope')
-require('plugin/compe')
-require('plugin/autopairs')
+require("lazy_setup")
+require("options")
+ 
+vim.cmd.colorscheme "habamax"
