@@ -4,5 +4,3 @@ vim.g.maplocalleader = " "
 
 require("lazy_setup")
 require("options")
- 
-vim.cmd.colorscheme "habamax"
