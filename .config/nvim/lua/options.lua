@@ -17,13 +17,9 @@ vim.o.switchbuf = 'useopen'
 vim.o.autoread = true
 vim.o.autowriteall = true
 
-vim.cmd([[
-augroup auto_read_write
-   autocmd!
-   autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * silent! checktime
-   autocmd BufLeave,FocusLost * silent! wall
-augroup END
-]])
+
+-- Splits
+vim.o.splitright = true
 
 
 -- Mouse
