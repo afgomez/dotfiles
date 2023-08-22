@@ -52,7 +52,7 @@ vim.o.cursorline = true
 vim.o.laststatus = 2
 vim.o.cmdheight = 2
 
-vim.o.scrolloff = 5
+vim.o.scrolloff = 8
 
 vim.o.virtualedit = 'block'
 vim.o.termguicolors = true
