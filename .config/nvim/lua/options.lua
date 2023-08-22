@@ -89,7 +89,7 @@ local undodir = vim.fn.stdpath('cache') .. '/undo'
 vim.o.undofile = true
 vim.o.undodir = undodir
 
-vim.o.undolevels=1000
+vim.o.undolevels = 1000
 
 
 -- Ensure directories exist

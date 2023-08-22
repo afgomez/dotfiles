@@ -36,7 +36,6 @@ return {
          autotag = {
             enable = true,
          },
-
       })
    end
 }
