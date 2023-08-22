@@ -19,9 +19,9 @@ vim.o.autowriteall = true
 
 vim.cmd([[
 augroup auto_read_write
-  autocmd!
-  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * silent! checktime
-  autocmd BufLeave,FocusLost * silent! wall
+   autocmd!
+   autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * silent! checktime
+   autocmd BufLeave,FocusLost * silent! wall
 augroup END
 ]])
 
@@ -99,10 +99,10 @@ vim.o.undolevels=1000
 -- Ensure directories exist
 vim.cmd([[
 if !isdirectory(expand(&backupdir))
-  call mkdir(expand(&backupdir), "p")
+   call mkdir(expand(&backupdir), "p")
 endif
 
 if !isdirectory(expand(&undodir))
-  call mkdir(expand(&undodir), "p")
+   call mkdir(expand(&undodir), "p")
 endif
 ]])
