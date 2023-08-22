@@ -17,9 +17,12 @@ local servers = {
 vim.api.nvim_create_autocmd({ 'LspAttach' }, {
    desc = 'LSP actions',
    callback = function(event)
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = event.buffer })
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = event.buffer })
-      vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = event.bufffer })
+      vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = event.buffer, desc = 'LSP: Show information' })
+      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = event.buffer, desc = 'LSP: Go to definition' })
+      vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = event.buffer, desc = 'LSP: Go to references' })
+
+      vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, { buffer = event.buffer, desc = 'LSP: Rename' })
+      vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, { buffer = event.buffer, desc = 'LSP: Code action' })
    end
 })
 
