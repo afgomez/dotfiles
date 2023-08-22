@@ -8,3 +8,14 @@ vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost'}, {
    command = "silent! wall",
 })
 
+vim.api.nvim_create_autocmd({ 'Filetype' }, {
+   pattern = { "*" },
+   callback = function()
+      if (vim.opt.tw:get() == 0) then
+         vim.opt_local.colorcolumn = '80'
+      else
+         vim.opt_local.colorcolumn = '+0'
+      end
+   end
+})
+

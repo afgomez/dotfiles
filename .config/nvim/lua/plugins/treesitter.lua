@@ -8,7 +8,7 @@ return {
    },
    tag = "v0.9.1",
    build = ":TSUpdate",
-   config = function() 
+   config = function()
       require("nvim-treesitter.configs").setup({
          ensure_installed = "all",
 
@@ -18,7 +18,7 @@ return {
 
          indent = {
             enable = true,
-         },  
+         },
 
          context_commentstring = {
             enable = true,
