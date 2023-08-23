@@ -1,5 +1,6 @@
 local servers = {
    cssls = {},
+   efm = {}, -- setup below
    html = {},
    jsonls = {},
    lua_ls = {
@@ -18,40 +19,80 @@ vim.api.nvim_create_autocmd({ 'LspAttach' }, {
    desc = 'LSP actions',
    callback = function(event)
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = event.buffer, desc = 'LSP: Show information' })
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = event.buffer, desc = 'LSP: Go to definition' })
+      vim.keymap.set('n', 'C-]', vim.lsp.buf.definition, { buffer = event.buffer, desc = 'LSP: Go to definition' })
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = event.buffer, desc = 'LSP: Go to references' })
 
       vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, { buffer = event.buffer, desc = 'LSP: Rename' })
       vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, { buffer = event.buffer, desc = 'LSP: Code action' })
+
+      vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
+      vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to previous diagnostic' })
+      vim.keymap.set('n', '<leader>dd', vim.diagnostic.open_float, { desc = 'View diagnostic message' })
+      vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
    end
 })
 
 
 
 return {
-   'neovim/nvim-lspconfig',
-   dependencies = {
-      { 'folke/neodev.nvim', config = true },
-      { 'williamboman/mason.nvim', config = true },
-      { 'williamboman/mason-lspconfig.nvim',
-         config = function()
-            require('mason-lspconfig').setup({
-               ensure_installed = vim.tbl_keys(servers),
-            })
-         end,
+   {
+      'neovim/nvim-lspconfig',
+      dependencies = {
+         'hrsh7th/cmp-nvim-lsp',
+         { 'creativenull/efmls-configs-nvim', version = 'v1.x.x' },
+         { 'folke/neodev.nvim',               config = true },
+         { 'williamboman/mason.nvim',         config = true },
+         {
+            'williamboman/mason-lspconfig.nvim',
+            config = function()
+               require('mason-lspconfig').setup({
+                  ensure_installed = vim.tbl_keys(servers),
+               })
+            end,
+         },
       },
-   },
 
-   config = function()
-      require('mason-lspconfig').setup_handlers {
-         function(server_name)
-            require('lspconfig')[server_name].setup {
-               -- capabilities = capabilities,
-               -- on_attach = on_attach,
-               settings = servers[server_name],
-               filetypes = (servers[server_name] or {}).filetypes,
+      config = function()
+         local jsTools = {
+            require('efmls-configs.formatters.prettier'),
+         }
+
+         local languages = {
+            javascript = jsTools,
+            typescript = jsTools,
+            typescriptreact = jsTools,
+            vue = jsTools,
+            lua = {
+               require('efmls-configs.linters.luacheck'),
+               require('efmls-configs.formatters.stylua'),
             }
-         end
-      }
-   end
+         }
+
+         servers.efm = {
+            filetypes = vim.tbl_keys(languages),
+            init_options = {
+               documentFormatting = true,
+               documentFormattingRange = true,
+            },
+            settings = {
+               languages = languages
+            }
+         }
+
+         local capabilities = vim.lsp.protocol.make_client_capabilities()
+         capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+
+         require('mason-lspconfig').setup_handlers {
+            function(server_name)
+               require('lspconfig')[server_name].setup {
+                  capabilities = capabilities,
+                  -- on_attach = on_attach,
+                  settings = servers[server_name],
+                  filetypes = (servers[server_name] or {}).filetypes,
+               }
+            end
+         }
+      end
+   },
 }

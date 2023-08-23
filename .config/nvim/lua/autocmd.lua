@@ -1,9 +1,16 @@
 vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold', 'CursorHoldI' }, {
-    pattern = { "*" },
-    command = "silent! checktime",
+   pattern = { "*" },
+   command = "silent! checktime",
 })
 
-vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost'}, {
+vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
+   pattern = { "*" },
+   callback = function()
+      vim.lsp.buf.format()
+   end
+})
+
+vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost' }, {
    pattern = { "*" },
    command = "silent! wall",
 })
