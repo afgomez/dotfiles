@@ -7,6 +7,7 @@ return {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-nvim-lsp',
+      'petertriho/cmp-git',
 
       -- Snippets
       {
@@ -80,6 +81,13 @@ return {
          experimental = {
             ghost_text = true,
          }
+      })
+
+      cmp.setup.filetype('gitcommit', {
+         sources = cmp.config.sources({
+            { name = 'git' },
+            { name = 'path' },
+         })
       })
    end
 }
