@@ -8,10 +8,10 @@ return {
          show_trailing_blankline_indent = false,
       }
    },
-   {
-      "lukas-reineke/virt-column.nvim",
-      opts = {
-         char = "▕"
-      }
-   }
+   -- {
+   --    "lukas-reineke/virt-column.nvim",
+   --    opts = {
+   --       char = "▕"
+   --    }
+   -- }
 }
