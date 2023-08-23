@@ -4,7 +4,7 @@ system=`uname -s`
 export LANG=en_US.UTF-8
 
 # Use the one and only terminal editor
-export EDITOR=nvim
+export EDITOR=vim
 
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
