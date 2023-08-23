@@ -1,27 +1,27 @@
-vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold', 'CursorHoldI' }, {
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
    pattern = { "*" },
    command = "silent! checktime",
 })
 
-vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
    pattern = { "*" },
    callback = function()
       vim.lsp.buf.format()
-   end
+   end,
 })
 
-vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost' }, {
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
    pattern = { "*" },
    command = "silent! wall",
 })
 
--- vim.api.nvim_create_autocmd({ 'FileType' }, {
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
 --    pattern = { "*" },
 --    callback = function()
 --       if (vim.opt.textwidth:get() == 0) then
---          vim.opt_local.colorcolumn = '80'
+--          vim.opt_local.colorcolumn = "80"
 --       else
---          vim.opt_local.colorcolumn = '+0'
+--          vim.opt_local.colorcolumn = "+0"
 --       end
 --    end
 -- })

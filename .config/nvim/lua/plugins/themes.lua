@@ -1,21 +1,22 @@
 return {
    {
-      'projekt0n/github-nvim-theme',
+      "projekt0n/github-nvim-theme",
    },
    {
-      "catppuccin/nvim", name = "catppuccin",
+      "catppuccin/nvim",
+      name = "catppuccin",
    },
    {
-      'rose-pine/neovim',
-      name = 'rose-pine',
+      "rose-pine/neovim",
+      name = "rose-pine",
       lazy = false,
       priority = 1000,
       config = function()
-         require('rose-pine').setup({
-            dark_variant = 'moon'
+         require("rose-pine").setup({
+            dark_variant = "moon",
          })
 
-         vim.cmd('colorscheme rose-pine')
+         vim.cmd("colorscheme rose-pine")
       end,
-   }
+   },
 }

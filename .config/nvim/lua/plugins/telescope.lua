@@ -1,9 +1,9 @@
 return {
-   'nvim-telescope/telescope.nvim',
-   tag = '0.1.2',
+   "nvim-telescope/telescope.nvim",
+   tag = "0.1.2",
    dependencies = {
-      'nvim-lua/plenary.nvim',
-      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
+      "nvim-lua/plenary.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
    },
    cmd = "Telescope",
    keys = {
@@ -11,15 +11,15 @@ return {
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
    },
    config = function()
-      require('telescope').setup({
+      require("telescope").setup({
          defaults = {
             mappings = {
                i = {
-                  ["<esc>"] = "close"
-               }
-            }
-         }
+                  ["<esc>"] = "close",
+               },
+            },
+         },
       })
-      require('telescope').load_extension('fzf')
+      require("telescope").load_extension("fzf")
    end,
 }
