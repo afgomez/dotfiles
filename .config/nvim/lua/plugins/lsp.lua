@@ -12,6 +12,7 @@ local servers = {
       },
    },
    rust_analyzer = {},
+   tailwindcss = {},
    tsserver = {},
    volar = {},
    yamlls = {},
@@ -40,8 +41,8 @@ return {
       dependencies = {
          "hrsh7th/cmp-nvim-lsp",
          { "creativenull/efmls-configs-nvim", version = "v1.x.x" },
-         { "folke/neodev.nvim", config = true },
-         { "williamboman/mason.nvim", config = true },
+         { "folke/neodev.nvim",               config = true },
+         { "williamboman/mason.nvim",         config = true },
          {
             "williamboman/mason-lspconfig.nvim",
             config = function()
@@ -91,7 +92,7 @@ return {
             function(server_name)
                local server = require("lspconfig")[server_name]
 
-               server.setup(vim.tbl_deep_extend("force", servers[server_name], {
+               server.setup(vim.tbl_deep_extend("force", servers[server_name] or {}, {
                   capabilities = capabilities,
                }))
             end,
