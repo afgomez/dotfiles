@@ -7,18 +7,14 @@ return {
    },
    cmd = "Telescope",
    keys = {
-      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-      { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
+      { "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+      { "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
    },
    config = function()
-      require("telescope").setup({
-         defaults = {
-            mappings = {
-               i = {
-                  ["<esc>"] = "close",
-               },
-            },
-         },
+      require(
+         "telescope"
+      ).setup({
+         defaults = { mappings = { i = { ["<esc>"] = "close" } } },
       })
       require("telescope").load_extension("fzf")
    end,
