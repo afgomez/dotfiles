@@ -20,3 +20,51 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to the window on the right
 -- Reselect when identing visual blocks
 vim.keymap.set("v", ">", ">gv", { noremap = true })
 vim.keymap.set("v", "<", "<gv", { noremap = true })
+
+if vim.fn.has("gui") then
+   -- MacOS movement key mappings:qa
+   vim.keymap.set({ "n", "c", "i" }, "<D-Left>", "<Home>", { noremap = true })
+   vim.keymap.set({ "n" }, "<M-Left>", "b", { noremap = true })
+   vim.keymap.set({ "i" }, "<M-Left>", "<C-o>b", { noremap = true })
+   vim.keymap.set({ "c" }, "<M-Left>", "<S-Left>", { noremap = true })
+
+   vim.keymap.set({ "n", "c", "i" }, "<D-Right>", "<End>", { noremap = true })
+   vim.keymap.set({ "n" }, "<M-Right>", "w", { noremap = true })
+   vim.keymap.set({ "i" }, "<M-Right>", "<C-o>w", { noremap = true })
+   vim.keymap.set({ "c" }, "<M-Right>", "<S-Right>", { noremap = true })
+
+   vim.keymap.set({ "n", "i" }, "<D-Up>", "<C-Home>", { noremap = true })
+   vim.keymap.set({ "n" }, "<M-Up>", "{", { noremap = true })
+   vim.keymap.set({ "i" }, "<M-Up>", "<C-o>{", { noremap = true })
+
+   vim.keymap.set({ "n", "i" }, "<D-Down>", "<C-End>", { noremap = true })
+   vim.keymap.set({ "n" }, "<M-Down>", "}", { noremap = true })
+   vim.keymap.set({ "i" }, "<M-Down>", "<C-o>}", { noremap = true })
+
+   vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true })
+   vim.keymap.set("i", "<D-BS>", "<C-u>", { noremap = true })
+
+   -- Shift selection
+   vim.keymap.set({ "n", "v", "i" }, "<S-D-Left>", "<S-Home>", { noremap = true })
+   vim.keymap.set({ "n", "v", "i" }, "<S-M-Left>", "<S-C-Left>", { noremap = true })
+   vim.keymap.set({ "n", "v", "i" }, "<S-D-Right>", "<S-End>", { noremap = true })
+   vim.keymap.set({ "n", "v", "i" }, "<S-M-Right>", "<S-C-Right>", { noremap = true })
+   vim.keymap.set({ "n", "v", "i" }, "<S-D-Up>", "<S-C-Home>", { noremap = true })
+   vim.keymap.set({ "n", "v", "i" }, "<S-D-Down>", "<S-C-End>", { noremap = true })
+
+   -- MacOS Copy/Paste
+   vim.keymap.set("v", "<D-c>", '"*y')
+   vim.keymap.set({ "n", "v" }, "<D-v>", '"*P')
+   vim.keymap.set({ "c", "i" }, "<D-v>", "<C-R>*")
+
+   -- MacOS Standard GUI
+   vim.keymap.set({ "n", "i", "v" }, "<D-s>", ":w<CR>", { noremap = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-q>", ":qall", { noremap = true })
+
+   -- Cmd-Enter in the middle of the line creates a new line
+   vim.keymap.set("i", "<D-CR>", "<C-o>o")
+
+   -- Find in file
+   vim.keymap.set("n", "<D-f>", "/", { noremap = true })
+   vim.keymap.set("n", "<S-D-f>", ":grep ", { noremap = true }) -- Not working :/
+end
