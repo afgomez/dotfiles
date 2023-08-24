@@ -79,6 +79,8 @@ if vim.fn.has("gui") then
    vim.keymap.set({ "n", "i", "v" }, "<D-M-Left>", ":tabprev<CR>", { noremap = true, silent = true })
    vim.keymap.set({ "n", "i", "v" }, "<D-M-Right>", ":tabnext<CR>", { noremap = true, silent = true })
 
+   vim.keymap.set("n", "<D-a>", "ggVG", { noremap = true, silent = true, desc = "Select all"})
+
    -- Tab navigation
    vim.keymap.set({ "n", "i", "v" }, "<D-1>", ":tabn 1<CR>", { noremap = true, silent = true })
    vim.keymap.set({ "n", "i", "v" }, "<D-2>", ":tabn 2<CR>", { noremap = true, silent = true })
