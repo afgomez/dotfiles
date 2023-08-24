@@ -18,4 +18,10 @@ require("lazy").setup("plugins", {
    change_detection = {
       enabled = false,
    },
+   dev = {
+      path = "~/code",
+   },
+   ui = {
+      border = "rounded",
+   },
 })
