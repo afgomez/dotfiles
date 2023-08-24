@@ -81,6 +81,7 @@ vim.o.undolevels = 1000
 vim.o.guifont = "PragmataPro Liga:h14,Symbols Nerd Font Mono:h14"
 
 if vim.fn.has("gui") then
+   vim.opt.title = true
    -- " Shift + special movement key (<S-Left>, etc.) and mouse starts insert mode
    vim.opt.selectmode = { "mouse", "key" }
    vim.opt.keymodel = { "startsel", "stopsel" }
@@ -88,8 +89,7 @@ end
 
 if vim.g.neovide then
    vim.g.neovide_cursor_animation_length = 0
-   vim.g.neovide_scroll_animation_length = 0.1
-   vim.g.neovide_window_animation_length = 0
+   vim.g.neovide_scroll_animation_length = 0
 end
 
 -- Ensure directories exist
