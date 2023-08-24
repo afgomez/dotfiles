@@ -102,11 +102,11 @@ return {
          },
       })
 
-      cmp.setup.filetype("gitcommit", {
-         sources = cmp.config.sources({
-            { name = "git" },
-            { name = "path" },
-         }),
+      local git_sources = cmp.config.sources({
+         { name = "git" },
+         { name = "path" },
       })
+      cmp.setup.filetype("gitcommit", { sources = git_sources })
+      cmp.setup.filetype("gitrebase", { sources = git_sources })
    end,
 }
