@@ -28,10 +28,6 @@ vim.api.nvim_create_autocmd({ "LspAttach" }, {
       vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { buffer = event.buffer, desc = "LSP: Rename" })
       vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { buffer = event.buffer, desc = "LSP: Code action" })
 
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to previous diagnostic" })
-      vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { desc = "View diagnostic message" })
-      vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
    end,
 })
 

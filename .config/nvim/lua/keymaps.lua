@@ -24,6 +24,12 @@ vim.keymap.set("v", "<", "<gv", { noremap = true })
 -- Netrw
 vim.keymap.set("n", "<leader>e", ":25Lexplore", { noremap = true })
 
+-- Diagnostics
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { desc = "View diagnostic message" })
+vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
 if vim.g.neovide then
    -- Fix scrolling
    vim.keymap.set({ "n", "i", "v" }, "<ScrollWheelUp>", "<C-Y>")
