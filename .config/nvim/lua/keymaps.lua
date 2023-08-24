@@ -59,7 +59,22 @@ if vim.fn.has("gui") then
 
    -- MacOS Standard GUI
    vim.keymap.set({ "n", "i", "v" }, "<D-s>", ":w<CR>", { noremap = true })
-   vim.keymap.set({ "n", "i", "v" }, "<D-q>", ":qall", { noremap = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-w>", ":q<CR>", { noremap = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-t>", ":tabnew<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-M-Left>", ":tabprev<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-M-Right>", ":tabnext<CR>", { noremap = true, silent = true })
+
+   -- Tab navigation
+   vim.keymap.set({ "n", "i", "v" }, "<D-1>", ":tabn 1<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-2>", ":tabn 2<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-3>", ":tabn 3<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-4>", ":tabn 4<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-5>", ":tabn 5<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-6>", ":tabn 6<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-7>", ":tabn 7<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-8>", ":tabn 8<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-9>", ":tabn 9<CR>", { noremap = true, silent = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-0>", ":tabn 10<CR>", { noremap = true, silent = true })
 
    -- Cmd-Enter in the middle of the line creates a new line
    vim.keymap.set("i", "<D-CR>", "<C-o>o")
