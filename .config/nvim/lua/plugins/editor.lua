@@ -18,10 +18,12 @@ return {
    -- SplitJoin
    {
       "Wansmer/treesj",
-      keys = { "<space>m", "<space>j", "<space>s" },
+      keys = { "gs", "gj" },
       dependencies = { "nvim-treesitter/nvim-treesitter" },
       config = function()
-         require("treesj").setup({})
+         require("treesj").setup({ use_default_keymaps = false })
+         vim.keymap.set("n", "gs", require("treesj").split, { desc = "Split node" })
+         vim.keymap.set("n", "gj", require("treesj").join, { desc = "Join node" })
       end,
    },
 
