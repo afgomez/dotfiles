@@ -21,6 +21,15 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to the window on the right
 vim.keymap.set("v", ">", ">gv", { noremap = true })
 vim.keymap.set("v", "<", "<gv", { noremap = true })
 
+-- Netrw
+vim.keymap.set("n", "<leader>e", ":25Lexplore", { noremap = true })
+
+if vim.g.neovide then
+   -- Fix scrolling
+   vim.keymap.set({ "n", "i", "v" }, "<ScrollWheelUp>", "<C-Y>")
+   vim.keymap.set({ "n", "i", "v" }, "<ScrollWheelDown>", "<C-E>")
+end
+
 if vim.fn.has("gui") then
    -- MacOS movement key mappings:qa
    vim.keymap.set({ "n", "c", "i" }, "<D-Left>", "<Home>", { noremap = true })
