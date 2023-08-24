@@ -22,7 +22,7 @@ vim.keymap.set("v", ">", ">gv", { noremap = true })
 vim.keymap.set("v", "<", "<gv", { noremap = true })
 
 -- Netrw
-vim.keymap.set("n", "<leader>e", ":25Lexplore", { noremap = true })
+vim.keymap.set("n", "<leader>e", ":25Lexplore<CR>", { noremap = true, desc = "Open Netrw on the side" })
 
 -- Diagnostics
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
