@@ -33,14 +33,18 @@ return {
 
          vim.keymap.set("n", "gs", treesj.split, { desc = "Split node" })
          vim.keymap.set("n", "gS", function()
-            treesj.split({ recursive = true })
-         end, { desc = "Split all nodes" })
+            treesj.split({ split = { recursive = true } })
+         end, { desc = "Split nodes recursively" })
+
          vim.keymap.set("n", "gj", treesj.join, { desc = "Join node" })
          vim.keymap.set("n", "gJ", function()
-            treesj.join({ recursive = true })
-         end, { desc = "Join all nodes" })
+            treesj.join({ join = { recursive = true } })
+         end, { desc = "Join nodes recursively" })
+
          vim.keymap.set("n", "gt", treesj.toggle, { desc = "Toggle single/multi line node" })
-         vim.keymap.set("n", "gt", treesj.toggle, { desc = "Toggle single/multi line node" })
+         vim.keymap.set("n", "gT", function()
+            treesj.toggle({ join = { recursive = true }, split = { recursive = true } })
+         end, { desc = "Toggle single/multi line node recursively" })
       end,
    },
 
