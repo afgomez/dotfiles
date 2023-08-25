@@ -62,19 +62,19 @@ return {
                set_jumps = true,
                goto_next_start = {
                   ["]m"] = { query = "@function.outer", desc = "Beginning of next function or method" },
-                  ["]c"] = { query = "@class.outer", desc = "Beginning of next class" },
+                  -- ["]c"] = { query = "@class.outer", desc = "Beginning of next class" },
                },
                goto_next_end = {
                   ["]M"] = { query = "@function.outer", desc = "End of next function or method" },
-                  ["]C"] = { query = "@class.outer", desc = "End of next class" },
+                  -- ["]C"] = { query = "@class.outer", desc = "End of next class" },
                },
                goto_previous_start = {
                   ["[m"] = { query = "@function.outer", desc = "Beginning of previous function or method" },
-                  ["[c"] = { query = "@class.outer", desc = "Beginning of previous class" },
+                  -- ["[c"] = { query = "@class.outer", desc = "Beginning of previous class" },
                },
                goto_previous_end = {
                   ["[M"] = { query = "@function.outer", desc = "End of previous function or method" },
-                  ["[C"] = { query = "@class.outer", desc = "End of previous class" },
+                  -- ["[C"] = { query = "@class.outer", desc = "End of previous class" },
                },
             },
          },

@@ -10,7 +10,6 @@
   "efmls-configs-nvim": { "branch": "main", "commit": "3c274bb64290a5c65987c29e8eb6d4df368a8d20" },
   "fidget.nvim": { "branch": "main", "commit": "0ba1e16d07627532b6cae915cc992ecac249fb97" },
   "github-nvim-theme": { "branch": "main", "commit": "af07dda03f6c7184bfd2cb0c9de4efebb26241d6" },
-  "gitlinker.nvim": { "branch": "master", "commit": "cc59f732f3d043b626c8702cb725c82e54d35c25" },
   "gitsigns.nvim": { "branch": "main", "commit": "2e23db475cb64299b58a40fe1c807da015d0781b" },
   "guess-indent.nvim": { "branch": "main", "commit": "b8ae749fce17aa4c267eec80a6984130b94f80b2" },
   "indent-blankline.nvim": { "branch": "master", "commit": "9637670896b68805430e2f72cf5d16be5b97a22a" },
@@ -35,7 +34,9 @@
   "telescope.nvim": { "branch": "master", "commit": "776b509f80dd49d8205b9b0d94485568236d1192" },
   "treesj": { "branch": "main", "commit": "bff8c32b826e188fa558e94c7c93ac17a8ef0365" },
   "unimpaired.nvim": { "branch": "main", "commit": "3a3993eb2d8df48dac691876751e80cccb395880" },
+  "vim-fugitive": { "branch": "master", "commit": "b3b838d690f315a503ec4af8c634bdff3b200aaf" },
   "vim-matchup": { "branch": "master", "commit": "582cbc8c2dc311deb7a03f7d505d52544c36d4b6" },
+  "vim-rhubarb": { "branch": "master", "commit": "ee69335de176d9325267b0fd2597a22901d927b1" },
   "vim-rsi": { "branch": "master", "commit": "45540637ead22f011e8215f1c90142e49d946a54" },
   "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" },
   "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }

@@ -77,6 +77,8 @@ local undodir = vim.fn.stdpath("cache") .. "/undo"
 vim.o.undofile = true
 vim.o.undodir = undodir
 
+vim.opt.fillchars:append({ diff = "╱" })
+
 vim.o.undolevels = 1000
 vim.o.guifont = "PragmataPro Liga:h14,Symbols Nerd Font Mono:h14"
 
