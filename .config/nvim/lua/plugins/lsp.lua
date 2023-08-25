@@ -38,8 +38,8 @@ return {
       dependencies = {
          "hrsh7th/cmp-nvim-lsp",
          { "creativenull/efmls-configs-nvim", version = "v1.x.x" },
-         { "folke/neodev.nvim", config = true },
-         { "williamboman/mason.nvim", config = true },
+         { "folke/neodev.nvim",               config = true },
+         { "williamboman/mason.nvim",         config = true },
          {
             "williamboman/mason-lspconfig.nvim",
             config = function()
@@ -95,5 +95,13 @@ return {
             end,
          })
       end,
+   },
+   {
+      "j-hui/fidget.nvim",
+      tag = "legacy",
+      event = "LspAttach",
+      opts = {
+         text = { spinner = "dots" },
+      },
    },
 }

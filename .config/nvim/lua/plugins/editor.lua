@@ -15,17 +15,44 @@ return {
       "tpope/vim-rsi",
    },
 
+   -- `[` and `]` keys
+   {
+      "tummetott/unimpaired.nvim",
+      opts = {},
+   },
+
    -- SplitJoin
+   -- TODO: explore https://github.com/CKolkey/ts-node-action/ instead
    {
       "Wansmer/treesj",
-      keys = { "gs", "gj" },
+      keys = { "gs", "gj", "gt" },
       dependencies = { "nvim-treesitter/nvim-treesitter" },
       config = function()
-         require("treesj").setup({ use_default_keymaps = false })
-         vim.keymap.set("n", "gs", require("treesj").split, { desc = "Split node" })
-         vim.keymap.set("n", "gj", require("treesj").join, { desc = "Join node" })
+         local treesj = require("treesj")
+         treesj.setup({ use_default_keymaps = false })
+
+         vim.keymap.set("n", "gs", treesj.split, { desc = "Split node" })
+         vim.keymap.set("n", "gS", function()
+            treesj.split({ recursive = true })
+         end, { desc = "Split all nodes" })
+         vim.keymap.set("n", "gj", treesj.join, { desc = "Join node" })
+         vim.keymap.set("n", "gJ", function()
+            treesj.join({ recursive = true })
+         end, { desc = "Join all nodes" })
+         vim.keymap.set("n", "gt", treesj.toggle, { desc = "Toggle single/multi line node" })
+         vim.keymap.set("n", "gt", treesj.toggle, { desc = "Toggle single/multi line node" })
       end,
    },
+
+   -- {
+   --    "ckolkey/ts-node-action",
+   --    dependencies = { "nvim-treesitter" },
+   --    config = function()
+   --       require("ts-node-action").setup()
+   --
+   --       vim.keymap.set("n", "ga", require("ts-node-action").node_action, { desc = "Trigger node action" })
+   --    end,
+   -- },
 
    -- Surround
    {
