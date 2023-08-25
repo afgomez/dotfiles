@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd({ "LspAttach" }, {
    desc = "LSP actions",
    callback = function(event)
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = event.buffer, desc = "LSP: Show information" })
-      vim.keymap.set("n", "C-]", vim.lsp.buf.definition, { buffer = event.buffer, desc = "LSP: Go to definition" })
+      -- vim.keymap.set("n", "C-]", vim.lsp.buf.definition, { buffer = event.buffer, desc = "LSP: Go to definition" })
       vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = event.buffer, desc = "LSP: Go to references" })
 
       vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { buffer = event.buffer, desc = "LSP: Rename" })

@@ -5,9 +5,7 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
    pattern = { "*" },
-   callback = function()
-      vim.lsp.buf.format()
-   end,
+   command = "silent! lua vim.lsp.buf.format()",
 })
 
 vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
