@@ -2,7 +2,15 @@ return {
    "nvim-treesitter/nvim-treesitter",
    dependencies = {
       "JoosepAlviste/nvim-ts-context-commentstring",
-      "andymass/vim-matchup",
+      {
+         "andymass/vim-matchup",
+         init = function()
+            vim.g.matchup_matchparen_offscreen = { method = "popup" }
+            vim.g.matchup_matchparen_deferred = 1
+            vim.g.matchup_matchparen_deferred_show_delay = 50
+            vim.g.matchup_matchparen_deferred_hide_delay = 300
+         end,
+      },
       "RRethy/nvim-treesitter-endwise",
       "windwp/nvim-ts-autotag",
       "nvim-treesitter/nvim-treesitter-textobjects",
