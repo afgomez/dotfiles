@@ -143,7 +143,7 @@ return {
             },
             volar = {
                filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue", "json" },
-               root_dir = vue_root_path,                                        -- only for projects with vue
+               root_dir = vue_root_path, -- only for projects with vue
                on_attach = function(client)
                   client.server_capabilities.documentFormattingProvider = false -- Use efm's Eslint/Prettier instead
                end,
