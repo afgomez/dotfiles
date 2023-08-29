@@ -38,7 +38,8 @@ vim.api.nvim_create_autocmd({ "LspAttach" }, {
       vim.keymap.set(
          { "n", "v" },
          "<leader>la",
-         vim.lsp.buf.code_action,
+         "<cmd>CodeActionMenu<CR>",
+         -- vim.lsp.buf.code_action,
          { buffer = event.buffer, desc = "LSP: Code action" }
       )
    end,
@@ -49,9 +50,29 @@ return {
       "neovim/nvim-lspconfig",
       dependencies = {
          "hrsh7th/cmp-nvim-lsp",
-         { "creativenull/efmls-configs-nvim",   version = "v1.x.x" },
-         { "folke/neodev.nvim",                 config = true },
-         { "williamboman/mason.nvim",           config = true },
+         { "creativenull/efmls-configs-nvim", version = "v1.x.x" },
+         { "folke/neodev.nvim", config = true },
+         { "williamboman/mason.nvim", config = true },
+         {
+            "weilbith/nvim-code-action-menu",
+            cmd = "CodeActionMenu",
+            init = function()
+               vim.g.code_action_menu_window_border = "rounded"
+               vim.g.code_action_menu_show_details = false
+               vim.g.code_action_menu_show_action_kind = false
+               vim.g.code_action_menu_show_diff = true
+            end,
+         },
+         {
+            "kosayoda/nvim-lightbulb",
+            opts = {
+               autocmd = { enabled = true },
+               sign = {
+                  enabled = true,
+                  text = "",
+               },
+            },
+         },
          { "williamboman/mason-lspconfig.nvim", config = false }, -- configure below
       },
       config = function()
