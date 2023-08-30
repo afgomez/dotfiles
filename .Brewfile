@@ -2,6 +2,7 @@ tap "homebrew/cask-fonts"
 
 brew "asdf"
 brew "bat"
+brew "difftastic"
 brew "exercism"
 brew "fd"
 brew "fzf"
