@@ -12,10 +12,10 @@ vim.keymap.set("n", "<leader><leader>", "<c-^>", { noremap = true, silent = true
 vim.keymap.set("n", "gd", "<C-]>", { desc = "Go to definition" })
 
 -- Window movement
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to the window on the left" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to the window below" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to the window above" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to the window on the right" })
+-- vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to the window on the left" })
+-- vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to the window below" })
+-- vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to the window above" })
+-- vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to the window on the right" })
 
 -- Reselect when identing visual blocks
 vim.keymap.set("v", ">", ">gv", { noremap = true })
