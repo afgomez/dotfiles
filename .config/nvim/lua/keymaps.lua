@@ -30,6 +30,15 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" }
 vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { desc = "View diagnostic message" })
 vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
+
+-- Git
+vim.keymap.set('n', "<leader>gg", ":tab G<cr>", { desc = 'Open Fugitive in new tab' })
+vim.keymap.set({ 'n', 'v' }, "<leader>gb", ":GBrowse<cr>", { desc = 'Open file in Github' })
+vim.keymap.set({ 'n', 'v' }, "<leader>gl", ":Git blame<cr>", { desc = 'View git blame for file/selection' })
+
+-- UI
+vim.keymap.set('n', "<leader>q", ":Sayonara!<cr>", { silent = true, desc = "Close buffer" })
+
 if vim.g.neovide then
    -- Fix scrolling
    vim.keymap.set({ "n", "i", "v" }, "<ScrollWheelUp>", "<C-Y>")
@@ -74,12 +83,12 @@ if vim.fn.has("gui") then
 
    -- MacOS Standard GUI
    vim.keymap.set({ "n", "i", "v" }, "<D-s>", ":w<CR>", { noremap = true })
-   vim.keymap.set({ "n", "i", "v" }, "<D-w>", ":q<CR>", { noremap = true })
+   vim.keymap.set({ "n", "i", "v" }, "<D-w>", ":Sayonara!<CR>", { noremap = true })
    vim.keymap.set({ "n", "i", "v" }, "<D-t>", ":tabnew<CR>", { noremap = true, silent = true })
    vim.keymap.set({ "n", "i", "v" }, "<D-M-Left>", ":tabprev<CR>", { noremap = true, silent = true })
    vim.keymap.set({ "n", "i", "v" }, "<D-M-Right>", ":tabnext<CR>", { noremap = true, silent = true })
 
-   vim.keymap.set("n", "<D-a>", "ggVG", { noremap = true, silent = true, desc = "Select all"})
+   vim.keymap.set("n", "<D-a>", "ggVG", { noremap = true, silent = true, desc = "Select all" })
 
    -- Tab navigation
    vim.keymap.set({ "n", "i", "v" }, "<D-1>", ":tabn 1<CR>", { noremap = true, silent = true })

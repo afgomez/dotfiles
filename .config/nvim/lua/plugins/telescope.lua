@@ -7,8 +7,9 @@ return {
    },
    cmd = "Telescope",
    keys = {
-      { "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-      { "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
+      { "<leader>f", "<cmd>Telescope find_files<cr>",                    desc = "Find files" },
+      { "<leader>b", "<cmd>Telescope buffers<cr>",                       desc = "Find buffers" },
+      { "<leader>s", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = 'LSP: Find symbols' },
    },
    config = function()
       require(

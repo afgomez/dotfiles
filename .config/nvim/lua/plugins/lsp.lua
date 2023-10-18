@@ -31,10 +31,11 @@ vim.api.nvim_create_autocmd({ "LspAttach" }, {
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = event.buffer, desc = "LSP: Show information" })
       -- vim.keymap.set("n", "C-]", vim.lsp.buf.definition, { buffer = event.buffer, desc = "LSP: Go to definition" })
       vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = event.buffer, desc = "LSP: Go to references" })
+      vim.keymap.set("n", "gD", vim.lsp.buf.type_definition,
+         { buffer = event.buffer, desc = "LSP: Go to type definition" })
 
       vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { buffer = event.buffer, desc = "LSP: Rename" })
       vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { buffer = event.buffer, desc = "LSP: Rename" })
-
       vim.keymap.set(
          { "n", "v" },
          "<leader>la",
@@ -51,8 +52,8 @@ return {
       dependencies = {
          "hrsh7th/cmp-nvim-lsp",
          { "creativenull/efmls-configs-nvim", version = "v1.x.x" },
-         { "folke/neodev.nvim", config = true },
-         { "williamboman/mason.nvim", config = true },
+         { "folke/neodev.nvim",               config = true },
+         { "williamboman/mason.nvim",         config = true },
          {
             "weilbith/nvim-code-action-menu",
             cmd = "CodeActionMenu",
@@ -143,7 +144,7 @@ return {
             },
             volar = {
                filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue", "json" },
-               root_dir = vue_root_path, -- only for projects with vue
+               root_dir = vue_root_path,                                        -- only for projects with vue
                on_attach = function(client)
                   client.server_capabilities.documentFormattingProvider = false -- Use efm's Eslint/Prettier instead
                end,
