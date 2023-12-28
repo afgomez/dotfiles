@@ -61,19 +61,7 @@ return {
             ["<C-e>"] = cmp.mapping.abort(),
             ["<CR>"] = cmp.mapping(function(fallback)
                if cmp.visible() then
-                  local current_entry = cmp.get_selected_entry()
-
-                  if not current_entry then
-                     -- HACK: Internal API.
-                     current_entry = cmp.core.view:get_first_entry()
-                  end
-
-                  if current_entry.exact and current_entry.completion_item.kind ~= snippet_kind then
-                     cmp.close()
-                     fallback()
-                  else
-                     cmp.confirm({ select = true })
-                  end
+                  cmp.confirm({ select = true })
                else
                   fallback()
                end
