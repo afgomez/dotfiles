@@ -24,8 +24,8 @@
 
 [diff]
 	algorithm = histogram
-	tool = nvimdiff
-	external = difft --display side-by-side-show-both
+	tool = opendiff
+	external = difft --display inline
 
 [grep]
 	linenumber = true
