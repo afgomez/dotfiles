@@ -21,3 +21,7 @@ zstyle ':completion:*' menu select
 # Allow for typos and case insensitive completions
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3)) numeric)'
+
+if type jj &>/dev/null; then
+  source <(jj util completion --zsh)
+fi
