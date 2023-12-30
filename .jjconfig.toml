@@ -1,0 +1,17 @@
+[user]
+name = 'Alejandro Fernández Gómez'
+email = 'antarticonorte@gmail.com'
+
+[ui]
+default-command = 'log'
+diff.tool = 'difft'
+diff-editor = 'opendiff'
+merge-editor = 'opendiff'
+
+[merge-tools.difft]
+diff-args = ["--color=always", "$left", "$right"]
+
+[merge-tools.opendiff]
+diff-args = ["$left", "$right"]
+edit-args = ["$left", "$right", "-merge $output"]
+merge-args = ["$left", "$right", "-ancestor $base", "-merge $output"]
