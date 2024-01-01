@@ -5,13 +5,21 @@ email = 'antarticonorte@gmail.com'
 [ui]
 default-command = 'log'
 diff.tool = 'difft'
-diff-editor = 'opendiff'
-merge-editor = 'opendiff'
+diff-editor = 'filemerge'
+merge-editor = 'filemerge'
+diff-instructions = false
 
 [merge-tools.difft]
-diff-args = ["--color=always", "$left", "$right"]
+diff-args = ["--color=always", "--display=inline", "$left", "$right"]
 
 [merge-tools.opendiff]
 diff-args = ["$left", "$right"]
-edit-args = ["$left", "$right", "-merge $output"]
+edit-args = ["$left", "$right", "-merge", "$output"]
 merge-args = ["$left", "$right", "-ancestor $base", "-merge $output"]
+
+# See https://gist.github.com/afgomez/57abc71290296816ddbd567b39e27f17
+[merge-tools.filemerge]
+program = "filemerge"
+diff-args = ["-left", "$left", "-right", "$right"]
+edit-args = ["-left", "$left", "-right", "$right", "-merge", "$output"]
+merge-args = ["-left", "$left", "-right", "$right", "-ancestor", "$base", "-merge", "$output"]
