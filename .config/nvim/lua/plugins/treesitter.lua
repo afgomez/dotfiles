@@ -1,7 +1,13 @@
 return {
    "nvim-treesitter/nvim-treesitter",
    dependencies = {
-      "JoosepAlviste/nvim-ts-context-commentstring",
+      {
+         "JoosepAlviste/nvim-ts-context-commentstring",
+         opts = {
+            enable_autocmd = false,
+         },
+         config = true,
+      },
       {
          "andymass/vim-matchup",
          init = function()
@@ -27,11 +33,6 @@ return {
 
          indent = {
             enable = true,
-         },
-
-         context_commentstring = {
-            enable = true,
-            enable_autocmd = false,
          },
 
          matchup = {
