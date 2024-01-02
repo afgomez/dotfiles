@@ -1,7 +1,13 @@
 [editor]
 auto-save = true
+rulers = [79]
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 0
