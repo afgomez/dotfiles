@@ -3,14 +3,15 @@ name = 'Alejandro Fernández Gómez'
 email = 'antarticonorte@gmail.com'
 
 [ui]
+editor = "hx"
 default-command = 'log'
 diff.tool = 'difft'
-diff-editor = 'filemerge'
-merge-editor = 'filemerge'
+# diff-editor = 'filemerge'
+# merge-editor = 'filemerge'
 diff-instructions = false
 
 [merge-tools.difft]
-diff-args = ["--color=always", "--display=inline", "$left", "$right"]
+diff-args = ["--color=always", "$left", "$right"]
 
 [merge-tools.opendiff]
 diff-args = ["$left", "$right"]
@@ -23,3 +24,7 @@ program = "filemerge"
 diff-args = ["-left", "$left", "-right", "$right"]
 edit-args = ["-left", "$left", "-right", "$right", "-merge", "$output"]
 merge-args = ["-left", "$left", "-right", "$right", "-ancestor", "$base", "-merge", "$output"]
+
+[experimental-advance-branches]
+# enabled-branches = ["glob:*"]
+# disabled-branches = ["main", "glob:push-*"]
