@@ -1,0 +1,13 @@
+# Setup emacs-style keybindings
+bindkey -e
+
+if [ -d "$HOME/.zshrc.d" ]; then
+  for file in $HOME/.zshrc.d/*.zsh; do
+    source "$file"
+  done
+fi
+
+if [ -e "$HOME/.localrc" ]; then
+  source "$HOME/.localrc"
+fi
+
