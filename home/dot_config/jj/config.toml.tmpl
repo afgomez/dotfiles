@@ -1,0 +1,13 @@
+[user]
+email = {{ .email | quote }}
+name = {{ .name | quote }}
+
+[ui]
+default-command = "log"
+diff-editor = ":builtin"
+
+[ui.diff]
+tool = "difft"
+
+[merge-tools.difft]
+diff-args = ["--color=always", "$left", "$right"]

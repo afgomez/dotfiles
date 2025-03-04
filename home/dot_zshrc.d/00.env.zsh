@@ -23,3 +23,6 @@ PAGER="less -FRXi"
 
 # ASDF Data dir
 export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
+
+# Config dirs for specific utilities
+export JJ_CONFIG="$XDG_CONFIG_HOME/jj/config.toml"
