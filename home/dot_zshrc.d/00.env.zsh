@@ -20,3 +20,6 @@ if [ -f /opt/homebrew/bin/brew ]; then
 fi
 
 PAGER="less -FRXi"
+
+# ASDF Data dir
+export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
