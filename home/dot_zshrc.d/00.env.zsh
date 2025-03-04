@@ -26,3 +26,4 @@ export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
 
 # Config dirs for specific utilities
 export JJ_CONFIG="$XDG_CONFIG_HOME/jj/config.toml"
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/ripgreprc"
