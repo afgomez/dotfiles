@@ -1,0 +1,19 @@
+# Font
+font-family = PragmataPro Mono
+font-size = 14
+adjust-cell-height = 2
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# UI
+window-padding-x = 3
+window-padding-y = 3
+window-padding-balance = true
+
+theme = pizarra
+bold-is-bright = true
+
+macos-titlebar-style = tabs
