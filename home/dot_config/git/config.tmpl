@@ -1,0 +1,45 @@
+[user]
+  email = {{ .email | quote }}
+  name = {{ .name | quote }}
+
+[alias]
+  amend = "commit --amend"
+  ci = "commit"
+  co = "checkout"
+  graph = "log --graph --oneline --format=jjish"
+  mine = "! git log --author='$(git config --get user.email)'"
+  st = "status"
+
+[branch]
+  autoSetupRebase = "always"
+
+[checkout]
+  defaultRemote = "origin"
+
+[commit]
+  verbose = true
+
+[diff]
+  algorithm = "histogram"
+  external = "difft --color auto --background dark --display side-by-side"
+
+[grep]
+  lineNumber = true
+
+[init]
+  defaultBranch = "main"
+
+[pretty]
+  jjish = "%C(auto,brightmagenta)%h%C(reset) %C(auto,yellow)%an%C(reset) %C(auto,cyan)%ad%C(reset) %C(auto,magenta)%D%C(reset)%n%s"
+
+
+[pull]
+  rebase = true
+
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+
+[includeIf "hasconfig:remote.*.url:git@github.com:{{- .work.github_org -}}/**"]
+  path = ~/.config/git/config.work
