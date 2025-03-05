@@ -14,7 +14,9 @@ brew bundle --file=- <<EOF
 # Commands
 brew "asdf"
 brew "bat"
+brew "colima"
 brew "difftastic"
+brew "docker"
 brew "fd"
 brew "git"
 brew "jj"
