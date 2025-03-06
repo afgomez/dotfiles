@@ -24,10 +24,12 @@ brew "jq"
 brew "less"
 brew "neovim"
 brew "ripgrep"
+brew "temporal"
 brew "tokei"
 brew "tree"
 brew "zoxide"
 brew "zsh-completions"
+
 
 # Dependencies
 brew "autoconf"
