@@ -2,7 +2,7 @@
 
 set -e
 
-system="`uname -s`"
+system="$(uname -s)"
 
 if [ $system != "Darwin" ]; then
   echo "System is not OSX. Skipping."
@@ -33,14 +33,12 @@ defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool true
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool true
 defaults write -g NSAutomaticTextCorrectionEnabled -bool true
 
-
 # UI
-# 
+#
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
-defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true 
-defaults write -g PMPrintingExpandedStateForPrint -bool true 
-defaults write -g PMPrintingExpandedStateForPrint2 -bool true 
-
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write -g PMPrintingExpandedStateForPrint -bool true
+defaults write -g PMPrintingExpandedStateForPrint2 -bool true
 
 # Dock
 #
@@ -52,8 +50,6 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock minimize-to-application -bool true
 defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock show-recents -bool false
-
-
 
 # Finder
 #
@@ -71,7 +67,6 @@ defaults write com.apple.desktopServices DSDontWriteUsbStores -bool true
 # Others
 #
 defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
-
 
 # Reset
 #

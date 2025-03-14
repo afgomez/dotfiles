@@ -31,9 +31,6 @@ brew "tree"
 brew "zoxide"
 brew "zsh-completions"
 
-# Neovim LSP/Formatters/etc
-brew "stylua"
-brew "lua-language-server"
 
 # Dependencies
 brew "autoconf"
