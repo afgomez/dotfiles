@@ -23,6 +23,7 @@ PAGER="less -FRXi"
 
 # ASDF Data dir
 export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
 
 # Config dirs for specific utilities
 export JJ_CONFIG="$XDG_CONFIG_HOME/jj/config.toml"
