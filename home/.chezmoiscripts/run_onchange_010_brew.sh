@@ -16,9 +16,9 @@ brew bundle --file=- <<EOF
 
 # Commands
 brew "bat"
-brew "colima"
 brew "difftastic"
 brew "docker"
+brew "docker-compose"
 brew "fd"
 brew "fzf"
 brew "git"
@@ -47,6 +47,7 @@ cask "appcleaner"
 cask "ghostty"
 cask "imageoptim"
 cask "maccy"
+cask "orbstack"
 cask "visual-studio-code"
 cask "zed"
 
