@@ -10,7 +10,7 @@ zstyle ':vcs_info:*' check-for-staged-changes true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
 
-precmd () {
+precmd() {
   psvar=()
   vcs_info
 
@@ -18,14 +18,14 @@ precmd () {
     color=""
 
     case "$vcs_info_msg_0_" in
-      master*)
-        color="red"
+    master*)
+      color="red"
       ;;
-      main*)
-        color="red"
+    main*)
+      color="red"
       ;;
-      *)
-        color="yellow"
+    *)
+      color="yellow"
       ;;
     esac
 

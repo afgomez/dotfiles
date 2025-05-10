@@ -1,14 +1,14 @@
 #!/bin/sh
 
 if ! command -v brew >/dev/null 2>&1; then
-    echo "❯ I could not find \`brew\` on the path."
-    echo "❯ Installing..."
+  echo "❯ I could not find \`brew\` on the path."
+  echo "❯ Installing..."
 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    echo "❯ Setting up homebrew..."
-    export PATH="/opt/homebrew/bin:$PATH"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+  echo "❯ Setting up homebrew..."
+  export PATH="/opt/homebrew/bin:$PATH"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 echo "❯ Installing homebrew formulae..."

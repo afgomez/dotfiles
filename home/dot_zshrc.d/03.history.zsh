@@ -18,6 +18,6 @@ setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
 zshaddhistory() {
-  emulate -L zsh
-  [[ $1 != ${~HISTORY_IGNORE} ]]
+    emulate -L zsh
+    [[ $1 != ${~HISTORY_IGNORE} ]]
 }

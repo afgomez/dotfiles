@@ -11,7 +11,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 ZSH_CACHE_DIR=$XDG_CACHE_HOME/zsh
 
 if [ $system=="Darwin" ]; then
-    export CLICOLOR=1
+  export CLICOLOR=1
 fi
 
 PAGER="less -FRXi"
@@ -22,10 +22,10 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/ripgreprc"
 
 # Homebrew in Apple Silicon
 if [ -f /opt/homebrew/bin/brew ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # vfox
 if type vfox &>/dev/null; then
-    eval "$(vfox activate zsh)"
+  eval "$(vfox activate zsh)"
 fi
