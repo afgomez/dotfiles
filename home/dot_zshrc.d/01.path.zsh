@@ -1,1 +1,1 @@
-path=($HOME/bin $path)
+path=($HOME/bin $HOME/.cargo/bin $path)
