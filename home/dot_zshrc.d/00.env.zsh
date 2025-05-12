@@ -24,8 +24,3 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/ripgreprc"
 if [ -f /opt/homebrew/bin/brew ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-
-# vfox
-if type vfox &>/dev/null; then
-  eval "$(vfox activate zsh)"
-fi

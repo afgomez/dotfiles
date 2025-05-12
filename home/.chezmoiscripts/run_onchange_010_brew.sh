@@ -34,7 +34,6 @@ brew "tealdeer"
 brew "temporal"
 brew "tokei"
 brew "tree"
-brew "vfox"
 brew "zoxide"
 brew "zsh-completions"
 
