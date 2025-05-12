@@ -2,6 +2,7 @@ setopt prompt_subst
 
 autoload -Uz vcs_info
 
+
 zstyle ':vcs_info:*' actionformats '%b%c%u|%a'
 zstyle ':vcs_info:*' formats '%b%c%u'
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b:%r'
@@ -9,6 +10,8 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' check-for-staged-changes true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
+
+zstyle ':vcs_info:*' enable jj git
 
 precmd() {
   psvar=()
