@@ -11,3 +11,6 @@ tool = "difft"
 
 [merge-tools.difft]
 diff-args = ["--color=always", "$left", "$right"]
+
+[aliases]
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
