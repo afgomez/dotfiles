@@ -1,1 +1,1 @@
-path=($HOME/bin $ASDF_DATA_DIR/shims $HOME/.cargo/bin $path)
+path=($HOME/bin $ASDF_DATA_DIR/shims $(brew --prefix rustup)/bin $path)

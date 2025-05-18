@@ -15,6 +15,7 @@ echo "❯ Installing homebrew formulae..."
 brew bundle --file=- <<EOF
 
 # Commands
+brew "asdf"
 brew "bat"
 brew "difftastic"
 brew "docker"
