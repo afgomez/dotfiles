@@ -48,6 +48,7 @@ brew "readline"
 # Applications
 cask "appcleaner"
 cask "ghostty"
+cask "hammerspoon"
 cask "imageoptim"
 cask "maccy"
 cask "orbstack"
