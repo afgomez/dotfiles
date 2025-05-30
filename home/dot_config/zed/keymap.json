@@ -1,0 +1,49 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  // Switch tabs with Cmd-Number
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+      "cmd-0": ["pane::ActivateItem", 9]
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // Unimpaired-like bindings for moving lines
+      "[ e": "editor::MoveLineUp",
+      "] e": "editor::MoveLineDown",
+
+      // j and k move over virtual lines
+      "j": ["vim::Down", { "display_lines": true }],
+      "down": ["vim::Down", { "display_lines": true }],
+      "g down": "vim::Down",
+      "g j": "vim::Down",
+      "k": ["vim::Up", { "display_lines": true }],
+      "up": ["vim::Up", { "display_lines": true }],
+      "g k": "vim::Up",
+      "g up": "vim::Up"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  }
+]
