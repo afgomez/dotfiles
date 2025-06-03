@@ -26,6 +26,7 @@ brew "git"
 brew "jj"
 brew "jq"
 brew "less"
+brew "mergiraf"
 brew "neovim"
 brew "node"
 brew "ripgrep"
@@ -37,7 +38,6 @@ brew "tokei"
 brew "tree"
 brew "zoxide"
 brew "zsh-completions"
-
 
 # Dependencies
 brew "autoconf"
