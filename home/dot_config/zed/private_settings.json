@@ -38,6 +38,8 @@
   "terminal": {
     "line_height": "standard"
   },
+  "pane_split_direction_vertical": "right",
+  "pane_split_direction_horizontal": "down",
   "theme": {
     "mode": "system",
     "light": "Github Light",
