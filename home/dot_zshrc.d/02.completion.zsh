@@ -13,7 +13,3 @@ zstyle ':completion:*' cache-path $ZSH_CACHE_DIR
 if type chezmoi &>/dev/null; then
   source <(chezmoi completion zsh)
 fi
-
-if type jj &>/dev/null; then
-  source <(jj util completion zsh)
-fi
