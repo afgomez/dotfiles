@@ -25,10 +25,6 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      // Unimpaired-like bindings for moving lines
-      "[ e": "editor::MoveLineUp",
-      "] e": "editor::MoveLineDown",
-
       // j and k move over virtual lines
       "j": ["vim::Down", { "display_lines": true }],
       "down": ["vim::Down", { "display_lines": true }],
@@ -44,6 +40,13 @@
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "MessageEditor > Editor && mode == full",
+    "bindings": {
+      "enter": "editor::Newline",
+      "cmd-enter": "agent::ChatWithFollow"
     }
   }
 ]
