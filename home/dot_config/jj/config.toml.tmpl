@@ -6,6 +6,7 @@ name = {{ .name | quote }}
 default-command = "log"
 diff-editor = ":builtin"
 diff-formatter = "difft"
+pager = ":builtin"
 
 [merge-tools.difft]
 diff-args = ["--color=always", "$left", "$right"]
