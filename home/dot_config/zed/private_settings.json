@@ -44,8 +44,8 @@
   "pane_split_direction_horizontal": "down",
   "theme": {
     "mode": "system",
-    "light": "Fleet Light",
-    "dark": "Fleet Dark"
+    "light": "One Light",
+    "dark": "One Dark"
   },
   "tabs": {
     "file_icons": true
