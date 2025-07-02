@@ -32,13 +32,16 @@
   },
   "wrap_guides": [80],
   "vim_mode": true,
-  "ui_font_family": "SF Pro",
+  "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "PragmataPro",
   "buffer_font_size": 14,
   "buffer_line_height": { "custom": 1.4 },
   "buffer_font_features": { "calt": false },
   "terminal": {
     "line_height": "standard"
+  },
+  "inlay_hints": {
+    "show_value_hints": false
   },
   "pane_split_direction_vertical": "right",
   "pane_split_direction_horizontal": "down",
