@@ -14,5 +14,5 @@ diff-args = ["--color=always", "$left", "$right"]
 [aliases]
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
 
-[git]
-push-bookmark-prefix = "afgomez/push-"
+[templates]
+git_push_bookmark = '"afgomez/push-" ++ change_id.short()'
