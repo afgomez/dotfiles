@@ -15,4 +15,12 @@ diff-args = ["--color=always", "$left", "$right"]
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
 
 [templates]
+draft_commit_description = '''
+concat(
+  builtin_draft_commit_description,
+  "JJ:",
+  "\nJJ: ignore-rest\n",
+  diff.git(),
+)
+'''
 git_push_bookmark = '"afgomez/push-" ++ change_id.short()'
