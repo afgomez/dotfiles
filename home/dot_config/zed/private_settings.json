@@ -9,9 +9,9 @@
 {
   "edit_predictions": {
     "mode": "subtle",
-    "enabled_in_text_threads": false,
-    "disabled_in": ["comment"]
+    "enabled_in_text_threads": false
   },
+  "edit_predictions_disabled_in": ["comment"],
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -22,8 +22,7 @@
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
-    },
-    "version": "2"
+    }
   },
   "base_keymap": "VSCode",
   "telemetry": {
