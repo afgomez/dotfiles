@@ -16,13 +16,12 @@
     "edit_prediction_provider": "zed"
   },
   "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "write",
-    "model_parameters": [],
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
-    }
+    },
+    "always_allow_tool_actions": true,
+    "default_profile": "write"
   },
   "base_keymap": "VSCode",
   "telemetry": {
@@ -55,6 +54,11 @@
     "light": "One Light",
     "dark": "One Dark"
   },
+  "icon_theme": {
+    "mode": "system",
+    "dark": "Colored Zed Icons Theme Dark",
+    "light": "Colored Zed Icons Theme Light"
+  },
   "tabs": {
     "file_icons": true
   },
@@ -62,6 +66,19 @@
     "inline_blame": {
       "show_commit_summary": true
     }
+  },
+
+
+  // Extensions I use everywhere
+  "auto_install_extensions": {
+    "basher": true,
+    "colored-zed-icons-theme": true,
+    "docker-compose": true,
+    "dockerfile": true,
+    "git-firefly": true,
+    "sql": true,
+    "toml": true,
+    "xml": true
   },
 
   // Run ESLint when saving
@@ -85,6 +102,15 @@
     "Vue.js": {
       "code_actions_on_format": {
         "source.fixAll.eslint": true
+      }
+    },
+    "Shell Script": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "shfmt",
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"]
+        }
       }
     }
   }
