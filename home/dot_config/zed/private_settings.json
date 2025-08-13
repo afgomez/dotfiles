@@ -31,17 +31,15 @@
   "wrap_guides": [80],
   "vim_mode": true,
   "vim": {
-    "use_smartcase_find": true,
-    "cursor_shape": {
-      "visual": "bar"
-    }
+    "use_smartcase_find": true
   },
   "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "PragmataPro",
   "buffer_font_size": 14,
-  "buffer_line_height": { "custom": 1.4 },
+  "buffer_line_height": "standard",
   "buffer_font_features": { "calt": false },
   "terminal": {
+    "font_size": 13,
     "line_height": "standard"
   },
   "inlay_hints": {
@@ -67,7 +65,6 @@
       "show_commit_summary": true
     }
   },
-
 
   // Extensions I use everywhere
   "auto_install_extensions": {
