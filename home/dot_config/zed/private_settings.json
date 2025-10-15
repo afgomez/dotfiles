@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tab_size": 2,
+  "use_system_window_tabs": true,
+  "unnecessary_code_fade": 0.5,
+  "minimap": {
+    "show": "never"
+  },
   "edit_predictions": {
     "mode": "subtle",
     "enabled_in_text_threads": false
@@ -16,6 +22,12 @@
     "edit_prediction_provider": "zed"
   },
   "agent": {
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "single_file_review": true,
+    "use_modifier_to_send": false,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
@@ -29,6 +41,8 @@
     "diagnostics": false
   },
   "wrap_guides": [80],
+  "use_smartcase_search": true,
+  "seed_search_query_from_cursor": "selection",
   "vim_mode": true,
   "vim": {
     "use_smartcase_find": true
@@ -37,10 +51,13 @@
   "buffer_font_family": "PragmataPro",
   "buffer_font_size": 14,
   "buffer_line_height": "standard",
-  "buffer_font_features": { "calt": false },
+  "buffer_font_features": { "calt": 0 },
   "terminal": {
     "font_size": 13,
     "line_height": "standard"
+  },
+  "project_panel": {
+    "entry_spacing": "standard"
   },
   "inlay_hints": {
     "show_value_hints": false
@@ -65,6 +82,7 @@
       "show_commit_summary": true
     }
   },
+  "autosave": "on_focus_change",
 
   // Extensions I use everywhere
   "auto_install_extensions": {
@@ -76,39 +94,5 @@
     "sql": true,
     "toml": true,
     "xml": true
-  },
-
-  // Run ESLint when saving
-  "autosave": "on_focus_change",
-  "languages": {
-    "TypeScript": {
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
-    },
-    "JavaScript": {
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
-    },
-    "TSX": {
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
-    },
-    "Vue.js": {
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
-    },
-    "Shell Script": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "shfmt",
-          "arguments": ["--filename", "{buffer_path}", "--indent", "2"]
-        }
-      }
-    }
   }
 }
