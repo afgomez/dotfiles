@@ -17,3 +17,7 @@ fi
 if type jj &>/dev/null; then
   source <(COMPLETE=zsh jj)
 fi
+
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
