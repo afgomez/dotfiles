@@ -7,80 +7,126 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "claude": {
+      "default_config_options": {
+        "mode": "acceptEdits",
+      },
+    },
+  },
+  "debugger": {
+    "stepping_granularity": "statement",
+  },
+  "outline_panel": {
+    "auto_fold_dirs": true,
+    "folder_icons": true,
+  },
+  "document_folding_ranges": "on",
+  "which_key": {
+    "enabled": false,
+  },
+  "lsp": {
+    "oxlint": {
+      "initialization_options": { "settings": { "typeAware": true } },
+    },
+    "biome": {
+      "settings": {
+        "require_config_file": true,
+      },
+    },
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "diagnostics": {
+    "inline": {
+      "update_debounce_ms": 150,
+    },
+  },
   "tab_size": 2,
   "use_system_window_tabs": true,
   "unnecessary_code_fade": 0.5,
   "minimap": {
-    "show": "never"
+    "show": "never",
   },
   "edit_predictions": {
+    "provider": "zed",
     "mode": "subtle",
-    "enabled_in_text_threads": false
+    "enabled_in_text_threads": false,
   },
   "edit_predictions_disabled_in": ["comment"],
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
   "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "model": "claude-sonnet-4-6",
     },
     "single_file_review": true,
     "use_modifier_to_send": false,
     "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "model": "claude-sonnet-4-6",
     },
-    "always_allow_tool_actions": true,
-    "default_profile": "write"
+    "default_profile": "write",
   },
   "base_keymap": "VSCode",
   "telemetry": {
-    "metrics": false,
-    "diagnostics": false
+    "metrics": true,
+    "diagnostics": true,
   },
   "wrap_guides": [80],
   "use_smartcase_search": true,
   "seed_search_query_from_cursor": "selection",
   "vim_mode": true,
   "vim": {
-    "use_smartcase_find": true
+    "use_smartcase_find": true,
   },
   "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "PragmataPro",
-  "buffer_font_size": 14,
+  "buffer_font_size": 14.0,
   "buffer_line_height": "standard",
   "buffer_font_features": { "calt": 0 },
   "terminal": {
     "font_size": 13,
-    "line_height": "standard"
+    "line_height": "standard",
   },
   "project_panel": {
-    "entry_spacing": "standard"
+    "auto_fold_dirs": true,
+    "folder_icons": true,
+    "hide_root": false,
+    "bold_folder_labels": false,
+    "entry_spacing": "standard",
   },
   "inlay_hints": {
-    "show_value_hints": false
+    "show_value_hints": false,
   },
   "pane_split_direction_vertical": "right",
   "pane_split_direction_horizontal": "down",
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
-  "icon_theme": {
-    "mode": "system",
-    "dark": "Colored Zed Icons Theme Dark",
-    "light": "Colored Zed Icons Theme Light"
-  },
+  "theme": "Catppuccin Mocha",
+  "icon_theme": "Catppuccin Mocha",
   "tabs": {
-    "file_icons": true
+    "file_icons": true,
   },
   "git": {
     "inline_blame": {
-      "show_commit_summary": true
-    }
+      "show_commit_summary": true,
+    },
   },
   "autosave": "on_focus_change",
 
@@ -93,6 +139,6 @@
     "git-firefly": true,
     "sql": true,
     "toml": true,
-    "xml": true
-  }
+    "xml": true,
+  },
 }

@@ -19,13 +19,12 @@
       "cmd-7": ["pane::ActivateItem", 6],
       "cmd-8": ["pane::ActivateItem", 7],
       "cmd-9": ["pane::ActivateItem", 8],
-      "cmd-0": ["pane::ActivateItem", 9]
-    }
+      "cmd-0": ["pane::ActivateItem", 9],
+    },
   },
   {
     "context": "VimControl && !menu",
     "bindings": {
-      // j and k move over virtual lines
       "j": ["vim::Down", { "display_lines": true }],
       "down": ["vim::Down", { "display_lines": true }],
       "g down": "vim::Down",
@@ -33,20 +32,20 @@
       "k": ["vim::Up", { "display_lines": true }],
       "up": ["vim::Up", { "display_lines": true }],
       "g k": "vim::Up",
-      "g up": "vim::Up"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
-    }
+      "g up": "vim::Up",
+    },
   },
   {
     "context": "MessageEditor > Editor && mode == full",
     "bindings": {
       "enter": "editor::Newline",
-      "cmd-enter": "agent::ChatWithFollow"
-    }
-  }
+      "cmd-enter": "agent::ChatWithFollow",
+    },
+  },
+  {
+    "context": "vim_mode == insert || vim_mode == replace || vim_mode == waiting",
+    "bindings": {
+      "ctrl-k": "editor::KillRingCut",
+    },
+  },
 ]
