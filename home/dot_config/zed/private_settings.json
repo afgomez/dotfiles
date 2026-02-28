@@ -133,6 +133,8 @@
   // Extensions I use everywhere
   "auto_install_extensions": {
     "basher": true,
+    "catpuccin": true,
+    "catpuccin-icons": true,
     "colored-zed-icons-theme": true,
     "docker-compose": true,
     "dockerfile": true,
