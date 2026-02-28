@@ -2,6 +2,12 @@
 ._*
 *~
 *.swp
+
+# Editors
 .nova
 .zed
 .vscode
+
+# AI
+.claude/worktrees
+.claude/settings.local.json
