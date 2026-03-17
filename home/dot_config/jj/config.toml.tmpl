@@ -10,8 +10,8 @@ diff-formatter = "difft"
 [merge-tools.difft]
 diff-args = ["--color=always", "$left", "$right"]
 
-[aliases]
-tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+[revsets]
+bookmark-advance-to = "@-"
 
 [templates]
 draft_commit_description = '''
