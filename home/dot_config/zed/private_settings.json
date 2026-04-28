@@ -97,11 +97,11 @@
   },
   "ui_font_family": ".SystemUIFont",
   "buffer_font_family": "Berkeley Mono",
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 14.0,
   "buffer_line_height": "standard",
   "buffer_font_features": { "calt": 0 },
   "terminal": {
-    "font_size": 13.0,
+    "font_size": 14.0,
     "line_height": "standard",
   },
   "project_panel": {
