@@ -7,6 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "diff_view_style": "split",
+  "completion_menu_item_kind": "off",
+  "document_symbols": "on",
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "show_count_badge": false,
+    "dock": "right",
+  },
   "cli_default_open_behavior": "new_window",
   "context_servers": {
     "mcp-server-linear": {
@@ -15,7 +28,6 @@
       "settings": {},
     },
   },
-  "agent_buffer_font_size": 13.0,
   "agent_servers": {
     "claude-acp": {
       "type": "registry",
@@ -31,13 +43,118 @@
   "which_key": {
     "enabled": false,
   },
+  "tab_size": 2,
+  "use_system_window_tabs": true,
+  "unnecessary_code_fade": 0.5,
+  "edit_predictions": {
+    "mode": "subtle",
+  },
+  "edit_predictions_disabled_in": ["comment"],
+  "agent": {
+    "enable_feedback": false,
+    "favorite_models": [
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-5.5",
+        "enable_thinking": true,
+        "effort": "medium",
+      },
+      {
+        "provider": "zed.dev",
+        "model": "claude-sonnet-4-6",
+        "enable_thinking": true,
+        "effort": "high",
+      },
+    ],
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "dock": "left",
+    "use_modifier_to_send": false,
+    "inline_assistant_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+    },
+    "single_file_review": true,
+    "default_model": {
+      "effort": "medium",
+      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+    },
+    "show_merge_conflict_indicator": false,
+  },
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "metrics": true,
+    "diagnostics": true,
+  },
+  "wrap_guides": [80],
+  "use_smartcase_search": true,
+  "seed_search_query_from_cursor": "selection",
+  "vim_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+  },
+  "ui_font_family": ".ZedSans",
+  "buffer_font_family": "Berkeley Mono",
+  "buffer_font_size": 13.0,
+  "buffer_line_height": "standard",
+  "buffer_font_features": { "calt": 0 },
+  "terminal": {
+    "show_count_badge": false,
+    "font_size": 13.0,
+    "line_height": "standard",
+  },
+  "project_panel": {
+    "dock": "right",
+    "entry_spacing": "standard",
+  },
+  "inlay_hints": {
+    "show_value_hints": false,
+  },
+  "pane_split_direction_vertical": "right",
+  "pane_split_direction_horizontal": "down",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Macchiato",
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
+  },
+  "tabs": {
+    "file_icons": true,
+  },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": true,
+    },
+  },
+  "autosave": "on_focus_change",
+
+  // Language overrides
+  "languages": {
+    "Markdown": {
+      "format_on_save": "on",
+    },
+    "Rust": {
+      "tab_size": 4,
+    },
+  },
+
+  // LSP overrides
   "lsp": {
     "oxlint": {
-      "initialization_options": { "settings": { "typeAware": true } },
+      "initialization_options": {
+        "typeAware": true,
+      },
     },
-    "biome": {
-      "settings": {
-        "require_config_file": true,
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": { "command": "clippy" },
       },
     },
     "vtsls": {
@@ -59,78 +176,8 @@
           },
         },
       },
-      "enable_lsp_tasks": true,
     },
   },
-  "tab_size": 2,
-  "use_system_window_tabs": true,
-  "unnecessary_code_fade": 0.5,
-  "edit_predictions": {
-    "mode": "subtle",
-  },
-  "edit_predictions_disabled_in": ["comment"],
-  "agent": {
-    "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
-    },
-    "single_file_review": true,
-    "default_model": {
-      "effort": "medium",
-      "enable_thinking": true,
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
-    },
-    "show_merge_conflict_indicator": false,
-  },
-  "base_keymap": "VSCode",
-  "telemetry": {
-    "metrics": true,
-    "diagnostics": true,
-  },
-  "wrap_guides": [80],
-  "use_smartcase_search": true,
-  "seed_search_query_from_cursor": "selection",
-  "vim_mode": true,
-  "vim": {
-    "use_smartcase_find": true,
-  },
-  "ui_font_family": ".SystemUIFont",
-  "buffer_font_family": "Berkeley Mono",
-  "buffer_font_size": 14.0,
-  "buffer_line_height": "standard",
-  "buffer_font_features": { "calt": 0 },
-  "terminal": {
-    "font_size": 14.0,
-    "line_height": "standard",
-  },
-  "project_panel": {
-    "entry_spacing": "standard",
-  },
-  "inlay_hints": {
-    "show_value_hints": false,
-  },
-  "pane_split_direction_vertical": "right",
-  "pane_split_direction_horizontal": "down",
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "Catppuccin Macchiato",
-  },
-  "icon_theme": {
-    "mode": "dark",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Macchiato",
-  },
-  "tabs": {
-    "file_icons": true,
-  },
-  "git": {
-    "inline_blame": {
-      "show_commit_summary": true,
-    },
-  },
-  "autosave": "on_focus_change",
 
   // Extensions I use everywhere
   "auto_install_extensions": {
