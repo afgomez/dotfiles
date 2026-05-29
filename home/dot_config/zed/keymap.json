@@ -35,17 +35,4 @@
       "g up": "vim::Up",
     },
   },
-  {
-    "context": "MessageEditor > Editor && mode == full",
-    "bindings": {
-      "enter": "editor::Newline",
-      "cmd-enter": "agent::ChatWithFollow",
-    },
-  },
-  {
-    "context": "vim_mode == insert || vim_mode == replace || vim_mode == waiting",
-    "bindings": {
-      "ctrl-k": "editor::KillRingCut",
-    },
-  },
 ]
