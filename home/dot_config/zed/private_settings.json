@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "on",
+  "markdown_preview_font_size": 16.0,
+  "agent_ui_font_size": 16.0,
+  "agent_buffer_font_size": 13.0,
   "diff_view_style": "split",
   "completion_menu_item_kind": "off",
   "document_symbols": "on",
@@ -32,7 +36,7 @@
     "claude-acp": {
       "type": "registry",
       "default_config_options": {
-        "mode": "acceptEdits",
+        "mode": "default",
       },
     },
   },
@@ -51,20 +55,25 @@
   },
   "edit_predictions_disabled_in": ["comment"],
   "agent": {
+    "sandbox_permissions": {
+      "network_hosts": [
+        "temporal.download"
+      ]
+    },
     "enable_feedback": false,
     "favorite_models": [
       {
         "provider": "openai-subscribed",
-        "model": "gpt-5.5",
+        "model": "gpt-5.6-terra",
         "enable_thinking": true,
-        "effort": "medium",
+        "effort": "medium"
       },
       {
-        "provider": "zed.dev",
-        "model": "claude-sonnet-4-6",
+        "provider": "openai-subscribed",
+        "model": "gpt-5.6-sol",
         "enable_thinking": true,
-        "effort": "high",
-      },
+        "effort": "medium"
+      }
     ],
     "tool_permissions": {
       "default": "allow",
@@ -80,11 +89,11 @@
       "effort": "medium",
       "enable_thinking": true,
       "provider": "openai-subscribed",
-      "model": "gpt-5.5",
+      "model": "gpt-5.6-sol",
     },
     "show_merge_conflict_indicator": false,
   },
-  "base_keymap": "VSCode",
+  "base_keymap": "Zed",
   "telemetry": {
     "metrics": true,
     "diagnostics": true,
@@ -97,13 +106,14 @@
     "use_smartcase_find": true,
   },
   "ui_font_family": ".ZedSans",
-  "buffer_font_family": "Berkeley Mono",
-  "buffer_font_size": 13.0,
+  "buffer_font_family": "PragmataPro",
+  "buffer_font_size": 14.0,
   "buffer_line_height": "standard",
   "buffer_font_features": { "calt": 0 },
   "terminal": {
+    "font_family": "PragmataPro",
     "show_count_badge": false,
-    "font_size": 13.0,
+    "font_size": 14.0,
     "line_height": "standard",
   },
   "project_panel": {
@@ -116,14 +126,14 @@
   "pane_split_direction_vertical": "right",
   "pane_split_direction_horizontal": "down",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "Catppuccin Macchiato",
+    "dark": "One Dark",
   },
   "icon_theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Macchiato",
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Light",
+    "dark": "Colored Zed Icons Theme Dark",
   },
   "tabs": {
     "file_icons": true,
